@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ladipage-rules" content="v2">
+<title>Semakan Prostat Percuma - Betalife Advance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<!--
+  BETALIFE LEAD (flow afico: Iklan -> Page -> Borang tapis -> WhatsApp) + elemen Flow Zizan.
+  Peraturan penukar: tiada letter-spacing, tiada :before/:after, tiada sticky, tiada animasi masuk dalam hero,
+  latar hanya pada blok, kad gradien ada background-color pejal, saiz teks minimum 15px (audiens berumur).
+  Fakta semua dari rekod: KKM FLS1024180-0, GMP, USM, 59,000+ pembelian (Akhmal Flow 3), label Roy/Dr. Mustaqim (Arif LP FB),
+  testimoni = tangkapan sebenar repo Brunei (sorotan kuning dah dibakar).
+-->
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Be Vietnam Pro',sans-serif;background:#eef4ef;color:#13241a}
+img{display:block;max-width:100%;height:auto}
+#btl{max-width:480px;margin:0 auto;background:#fffdf8}
+#btl section{position:relative}
+
+/* tombol emas 3D */
+.btn{display:block;margin:22px auto 0;width:100%;max-width:400px;padding:18px 16px;border-radius:14px;background-color:#f2c94c;background-image:linear-gradient(180deg,#ffe07a,#e9b532);color:#0a3526;text-align:center;text-decoration:none;font:900 21px/1.2 'Be Vietnam Pro',sans-serif;box-shadow:0 6px 0 #a87a12,0 12px 24px rgba(0,0,0,.28);transition:.2s}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #a87a12}
+.berdenyut{animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.btn-nota{margin:12px 0 0;text-align:center;font:600 15px/1.4 'Be Vietnam Pro',sans-serif;color:#d7efe0}
+
+/* 1. bar promo */
+.promo{padding:14px 12px 14px;background-color:#b91c1c;color:#fff;text-align:center}
+.promo-t{margin:0;font:900 18px/1.3 'Be Vietnam Pro',sans-serif;color:#fff}
+.promo-baris{display:flex;justify-content:center;align-items:center;gap:10px;margin:10px 0 0}
+.promo-l{margin:0;font:700 16px/1.2 'Be Vietnam Pro',sans-serif;color:#ffe9a8}
+.jam{display:flex;gap:6px}
+.jam .o{width:64px;padding:6px 0 5px;border-radius:8px;background:#fff;text-align:center}
+.jam .o span{display:block;font:900 24px/1 'Be Vietnam Pro',sans-serif;color:#b91c1c}
+.jam .o i{display:block;margin-top:3px;font:700 14px/1 'Be Vietnam Pro',sans-serif;font-style:normal;color:#7a1414}
+.promo-s{margin:10px 0 0;font:700 15px/1.3 'Be Vietnam Pro',sans-serif;color:#fff}
+
+/* 2. hero */
+.hero{padding:24px 16px 30px;background-color:#0b3d2b;background-image:radial-gradient(80% 50% at 50% 46%,#1d7a52 0,rgba(29,122,82,0) 70%),linear-gradient(180deg,#0f5238,#082a1e);color:#fff;text-align:center}
+.logo{width:150px;margin:0 auto 14px}
+.pil{display:block;width:fit-content;max-width:100%;margin:0 auto;padding:8px 16px;border-radius:99px;background:#e8c46a;color:#0a3526;font:800 15px/1.3 'Be Vietnam Pro',sans-serif}
+.h1{margin:16px 0 0;font:400 46px/1.02 Anton,Impact,sans-serif;color:#fff;text-transform:uppercase;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.h1-merah{display:block;width:fit-content;margin:8px auto 0;padding:4px 16px 6px;border-radius:10px;background:#dc2626;font:400 58px/1 Anton,Impact,sans-serif;color:#fff;text-transform:uppercase;box-shadow:0 5px 0 #7f1111}
+.h1-emas{margin:10px 0 0;font:400 40px/1.05 Anton,Impact,sans-serif;color:#ffd45e;text-transform:uppercase}
+.sub{margin:16px 0 0;font:600 18px/1.45 'Be Vietnam Pro',sans-serif;color:#e6f4ea}
+.duta{margin:18px auto 0;width:92%}
+.nama-baris{display:flex;gap:8px;margin:-6px 0 0}
+.nama{flex:1;padding:10px 8px;border-radius:12px;background:#fffdf8;border:2px solid #e8c46a;text-align:center}
+.nama b{display:block;font:400 20px/1.1 Anton,Impact,sans-serif;color:#0a3526}
+.nama span{display:block;margin-top:4px;font:700 15px/1.3 'Be Vietnam Pro',sans-serif;color:#3d5c48}
+.petik{margin:16px 0 0;padding:14px 14px;border-radius:12px;background:rgba(255,255,255,.08);border:1.5px solid rgba(232,196,106,.55);text-align:left}
+.petik p{margin:0;font:600 17px/1.5 'Be Vietnam Pro',sans-serif;color:#fff}
+.petik small{display:block;margin-top:8px;font:800 15px/1.3 'Be Vietnam Pro',sans-serif;color:#ffd45e}
+.cip{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0 0}
+.cip div{display:flex;align-items:center;gap:8px;padding:10px 10px;border-radius:10px;background:#fffdf8;text-align:left}
+.cip svg{flex:0 0 22px}
+.cip p{margin:0;font:800 15px/1.25 'Be Vietnam Pro',sans-serif;color:#0a3526}
+
+/* tajuk seksyen */
+.tag{display:block;width:fit-content;margin:0 auto;padding:6px 14px;border-radius:99px;background:#dc2626;color:#fff;font:800 15px/1.2 'Be Vietnam Pro',sans-serif}
+.tag-hijau{background:#0f5238}
+.h2{margin:12px 0 0;text-align:center;font:400 38px/1.08 Anton,Impact,sans-serif;color:#0a3526;text-transform:uppercase}
+.h2 em{font-style:normal;color:#dc2626}
+.p{margin:12px 0 0;text-align:center;font:500 17px/1.55 'Be Vietnam Pro',sans-serif;color:#2c4235}
+
+/* 3. tanda */
+.tanda{padding:34px 16px 34px;background:#fffdf8}
+.td{display:flex;align-items:center;gap:12px;margin:12px 0 0;padding:14px 14px;border-radius:14px;background:#fff;border:2px solid #f3c6c6;box-shadow:0 6px 16px rgba(127,17,17,.08);transition:.3s}
+.td:hover{transform:translateX(6px)}
+.td svg{flex:0 0 34px}
+.td p{margin:0;font:700 18px/1.35 'Be Vietnam Pro',sans-serif;color:#13241a}
+.gelap{margin:20px 0 0;padding:20px 16px;border-radius:16px;background-color:#111827;color:#fff;text-align:center}
+.gelap p{margin:0;font:600 18px/1.5 'Be Vietnam Pro',sans-serif;color:#e5e7eb}
+.gelap b{display:block;margin-top:8px;font:400 32px/1.1 Anton,Impact,sans-serif;color:#ffd45e;text-transform:uppercase}
+
+/* 4. punca + doktor */
+.punca{padding:34px 16px 34px;background:#eef6f0}
+.rajah{margin:18px 0 0;border-radius:14px;border:2px solid #cfe5d6}
+.fakta{margin:16px 0 0;padding:16px 14px;border-radius:14px;background:#0f5238;color:#fff;text-align:center}
+.fakta b{display:block;font:400 44px/1 Anton,Impact,sans-serif;color:#ffd45e}
+.fakta p{margin:8px 0 0;font:600 17px/1.45 'Be Vietnam Pro',sans-serif;color:#fff}
+.sumber{margin:10px 0 0;text-align:center;font:500 15px/1.4 'Be Vietnam Pro',sans-serif;color:#557061}
+.vid-tajuk{margin:24px 0 0;text-align:center;font:400 28px/1.1 Anton,Impact,sans-serif;color:#0a3526;text-transform:uppercase}
+.vid-sub{margin:6px 0 0;text-align:center;font:700 16px/1.4 'Be Vietnam Pro',sans-serif;color:#0f5238}
+.vid{margin:12px auto 0;width:78%;padding:6px;border-radius:16px;background:#0a3526}
+.vid video{display:block;width:100%;height:auto;border-radius:12px;background:#000}
+
+/* 5. produk */
+.produk{padding:34px 16px 34px;background-color:#0b3d2b;background-image:linear-gradient(180deg,#0f5238,#0a3526);color:#fff;text-align:center}
+.produk .h2{color:#fff}
+.produk .h2 em{color:#ffd45e}
+.produk .p{color:#e6f4ea}
+.produk-img{margin:16px auto 0;width:94%}
+.x3{margin:14px auto 0;width:90%;padding:10px;border-radius:14px;background:#fffdf8}
+.fungsi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 0}
+.fungsi div{padding:14px 10px;border-radius:14px;background:#fffdf8;color:#0a3526}
+.fungsi b{display:block;font:400 22px/1.1 Anton,Impact,sans-serif;color:#0f5238;text-transform:uppercase}
+.fungsi p{margin:6px 0 0;font:600 15px/1.4 'Be Vietnam Pro',sans-serif;color:#2c4235}
+.lencana{margin:16px auto 0;padding:10px;border-radius:12px;background:#fff}
+
+/* 6. testimoni */
+.testi{padding:34px 16px 34px;background:#fff8e1}
+.ts{margin:20px 0 0;padding:10px;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.10)}
+.ts img{border-radius:10px;margin:0 auto}
+.kap{margin:10px 0 0;padding:12px 12px;border-radius:10px;background:#ffe14d;text-align:center;font:800 18px/1.35 'Be Vietnam Pro',sans-serif;color:#13241a}
+.ramai{margin:22px 0 0;border-radius:16px}
+.nota{margin:12px 0 0;text-align:center;font:500 15px/1.4 'Be Vietnam Pro',sans-serif;color:#6b5a2a}
+
+/* 7. trust */
+.trust{padding:34px 16px 34px;background:#fffdf8}
+.kilang{margin:18px 0 0;border-radius:16px}
+.tr{display:flex;align-items:center;gap:12px;margin:12px 0 0;padding:14px 14px;border-radius:14px;background:#eef6f0;border:2px solid #cfe5d6}
+.tr svg{flex:0 0 32px}
+.tr b{display:block;font:800 18px/1.3 'Be Vietnam Pro',sans-serif;color:#0a3526}
+.tr span{display:block;margin-top:2px;font:500 15px/1.4 'Be Vietnam Pro',sans-serif;color:#3d5c48}
+
+/* 8. langkah (flow afico) */
+.langkah{padding:34px 16px 34px;background-color:#111827;color:#fff}
+.langkah .h2{color:#fff}
+.langkah .h2 em{color:#ffd45e}
+.lk{display:flex;align-items:center;gap:14px;margin:14px 0 0;padding:16px 14px;border-radius:16px;background:#1f2937;border:2px solid #374151}
+.no{flex:0 0 54px;height:54px;border-radius:50%;background:#e8c46a;text-align:center;font:400 30px/54px Anton,Impact,sans-serif;color:#0a3526}
+.lk b{display:block;font:800 19px/1.3 'Be Vietnam Pro',sans-serif;color:#fff}
+.lk span{display:block;margin-top:4px;font:500 16px/1.45 'Be Vietnam Pro',sans-serif;color:#d1d5db}
+
+/* 9. borang */
+.borang{padding:34px 16px 36px;background-color:#0b3d2b;background-image:linear-gradient(180deg,#0a3526,#0f5238);color:#fff}
+.borang .h2{color:#fff}
+.borang .h2 em{color:#ffd45e}
+.borang .p{color:#e6f4ea}
+.kad-borang{margin:20px 0 0;padding:20px 16px 22px;border-radius:18px;background-color:#fffdf8;border:3px solid #e8c46a;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.kad-borang form{margin:0}
+.kad-borang label{display:block;margin:14px 0 6px;font:800 17px/1.3 'Be Vietnam Pro',sans-serif;color:#0a3526}
+.kad-borang label:first-child{margin-top:0}
+.kad-borang input,.kad-borang select{display:block;width:100%;height:54px;padding:0 14px;border-radius:10px;border:2px solid #9cc5ab;background:#fff;font:600 17px/1.2 'Be Vietnam Pro',sans-serif;color:#13241a}
+.kad-borang button{display:block;width:100%;margin:20px 0 0;padding:18px 12px;border:0;border-radius:14px;background-color:#16a34a;background-image:linear-gradient(180deg,#22c55e,#15803d);color:#fff;font:900 20px/1.2 'Be Vietnam Pro',sans-serif;box-shadow:0 6px 0 #0f5a2c;cursor:pointer}
+.selamat{margin:14px 0 0;text-align:center;font:600 15px/1.4 'Be Vietnam Pro',sans-serif;color:#3d5c48}
+
+/* 10. kaki */
+.kaki{padding:24px 16px 30px;background:#082a1e;text-align:center}
+.kaki p{margin:0;font:500 15px/1.5 'Be Vietnam Pro',sans-serif;color:#b9d4c2}
+.kaki p+p{margin-top:10px}
+</style>
+</head>
+<body>
+<div id="btl">
+
+<!-- 1. BAR PROMO (Zizan) -->
+<section class="promo">
+  <p class="promo-t">SEMAKAN PROSTAT PERCUMA HARI INI</p>
+  <div class="promo-baris">
+    <p class="promo-l">Tamat dalam</p>
+    <div class="jam" data-countdown data-countdown-daily="">
+      <div class="o"><span data-unit="hour">00</span><i>JAM</i></div>
+      <div class="o"><span data-unit="minute">00</span><i>MINIT</i></div>
+      <div class="o"><span data-unit="second">00</span><i>SAAT</i></div>
+    </div>
+  </div>
+  <p class="promo-s">Free Pos &amp; COD Seluruh Malaysia</p>
+</section>
+
+<!-- 2. HERO: Roy + Dr. Mustaqim (Zizan: duta + doktor) -->
+<section class="hero">
+  <img class="logo" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/logo-betalife-cerah.webp" width="420" height="225" alt="Logo Betalife">
+  <p class="pil">Untuk lelaki 40+ &amp; anak yang risaukan ayah</p>
+  <h1 class="h1">Kerap Kencing Malam,</h1>
+  <p class="h1-merah">MENITIS</p>
+  <p class="h1-emas">&amp; Tak Lawas?</p>
+  <p class="sub">Semak punca sebenar dan dapatkan cadangan <b>PERCUMA</b> terus di WhatsApp. Isi borang 30 saat sahaja.</p>
+  <img class="duta" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-duta.webp" width="660" height="937" alt="Roy Azman memegang Betalife Advance bersama Dr. Mustaqim">
+  <div class="nama-baris">
+    <div class="nama"><b>ROY AZMAN</b><span>Pengguna Setia Betalife Advance</span></div>
+    <div class="nama"><b>DR. MUSTAQIM</b><span>Penasihat Kesihatan Totalmen</span></div>
+  </div>
+  <div class="petik">
+    <p>"Sekarang kencing saya dah terkawal, nak buat kerja pun dah senang, tak payah nak fikir nak cari toilet dah."</p>
+    <small>Roy Azman (Pelakon / DJ Radio)</small>
+  </div>
+  <a class="btn berdenyut" href="#borang" role="button">SEMAK SEKARANG, PERCUMA</a>
+  <p class="btn-nota">Tiada bayaran. Tiada paksaan beli.</p>
+  <div class="cip">
+    <div><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#16a34a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><p>Label disemak KKM</p></div>
+    <div><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#16a34a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><p>Kilang bertaraf GMP</p></div>
+    <div><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#16a34a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><p>Logam berat tidak dikesan</p></div>
+    <div><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#16a34a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><p>59,000+ pembelian</p></div>
+  </div>
+</section>
+
+<!-- 3. PERNAH JADI MACAM NI? (afico: masalah / Zizan: tanda + kad gelap) -->
+<section class="tanda">
+  <p class="tag">PERNAH JADI MACAM NI?</p>
+  <h2 class="h2">Tanda Prostat <em>Mula Bengkak</em></h2>
+  <div class="td"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p>Bangun kencing 2 kali atau lebih setiap malam, susah bangun Subuh</p></div>
+  <div class="td"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p>Menitis lepas kencing, seluar atau kain ada tompok</p></div>
+  <div class="td"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p>Kencing tersekat-sekat, lama menunggu dalam tandas</p></div>
+  <div class="td"><svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p>Kerap ke tandas setiap 1 hingga 2 jam di siang hari</p></div>
+  <div class="gelap">
+    <p>Ramai sangka ini perkara biasa bila dah berumur. Sebenarnya ia berpunca dari:</p>
+    <b>Prostat Membesar</b>
+  </div>
+</section>
+
+<!-- 4. PUNCA + DOKTOR -->
+<section class="punca">
+  <p class="tag tag-hijau">PUNCA SEBENAR</p>
+  <h2 class="h2">Bila Prostat Bengkak, <em>Saluran Kencing Dihimpit</em></h2>
+  <img class="rajah" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-rajah-prostat.webp" width="760" height="462" alt="Rajah prostat normal dan prostat membesar yang menekan saluran kencing">
+  <p class="p">Sebab itu anda kerap ke tandas tapi tak puas. Bila dah kencing pula, tak lawas. Lebih-lebih lagi waktu malam.</p>
+  <div class="fakta">
+    <b>30 TAHUN</b>
+    <p>Pembesaran prostat boleh bermula seawal umur 30 tahun.</p>
+  </div>
+  <p class="sumber">Sumber: Berry SJ et al. Journal of Urology, 1984 (PMID 6206240).</p>
+  <h3 class="vid-tajuk">Dengar Penjelasan Doktor</h3>
+  <p class="vid-sub">Tanda-Tanda Awal Bengkak Prostat, Dr. Ahmad Mustaqim</p>
+  <div class="vid">
+    <video controls playsinline preload="none" poster="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-video-doktor.webp" src="https://s.ladicdn.com/64d0957e7550bc001218243b/whatsapp-video-2025-02-28-at-24556-pm-20250301033658-cgrfv.mp4"></video>
+  </div>
+</section>
+
+<!-- 5. PRODUK (Zizan: kenalkan) -->
+<section class="produk">
+  <p class="tag">PILIHAN RAMAI LELAKI</p>
+  <h2 class="h2">Betalife <em>Advance</em></h2>
+  <p class="p">Saw Palmetto dan 7 herba lain dalam satu tablet kunyah 1000mg, untuk bantu prostat, saluran kencing dan tenaga lelaki dari dalam.</p>
+  <img class="produk-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-produk.webp" width="560" height="377" alt="Kotak dan botol Betalife Advance">
+  <div class="x3"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-3x.webp" width="560" height="174" alt="3X lebih penyerapan, terbukti klinikal"></div>
+  <div class="fungsi">
+    <div><b>Bantu Prostat</b><p>Saw Palmetto bantu prostat yang bengkak</p></div>
+    <div><b>Aliran Lawas</b><p>Akar Lalang bantu bersihkan saluran kencing</p></div>
+    <div><b>Kurang Radang</b><p>Bawang Putih, anti-radang semula jadi</p></div>
+    <div><b>Tenaga Lelaki</b><p>Tongkat Ali &amp; Ubi Jaga bantu stamina</p></div>
+  </div>
+  <img class="lencana" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-lencana.webp" width="620" height="106" alt="Lencana HACCP, GMP, Kementerian Kesihatan Malaysia, Standards Malaysia">
+  <a class="btn" href="#borang" role="button">SAYA NAK SEMAK PERCUMA</a>
+</section>
+
+<!-- 6. TESTIMONI (sorotan kuning + kapsyen) -->
+<section class="testi">
+  <p class="tag">BUKAN CLAIM KOSONG</p>
+  <h2 class="h2">Apa Kata <em>Pengguna Sebenar</em></h2>
+  <div class="ts">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-testi-hari3.webp" width="640" height="618" alt="Ulasan pelanggan: 7 tahun hadap masalah kerap kencing, hari ke-3 terus rasa perubahan">
+    <p class="kap">"7 tahun hadap masalah kerap kencing. Hari ke-3 terus rasa perubahan"</p>
+  </div>
+  <div class="ts">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-wa-6tahun.webp" width="483" height="787" alt="Mesej WhatsApp pelanggan: dalam 1 jam ada kalanya 3 kali, setelah guna Betalife 3 hari jadi 3 jam sekali">
+    <p class="kap">"Dalam 1 jam ada kalanya 3 kali. Setelah guna Betalife 3 hari, jadi 3 jam sekali"</p>
+  </div>
+  <div class="ts">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-fb-husin.webp" width="640" height="782" alt="Komen Facebook pelanggan: setahun pakai tiub kencing, sebotol baru guna sudah bebas daripada tiub">
+    <p class="kap">"Setahun terpaksa pakai tiub kencing. Sebotol baru guna, sudah bebas daripada tiub"</p>
+  </div>
+  <img class="ramai" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-ramai.webp" width="720" height="720" alt="Lebih 29,468 pengguna Totalmen berpuas hati">
+  <p class="nota">Pengalaman individu. Hasil berbeza bagi setiap orang.</p>
+  <a class="btn" href="#borang" role="button">SAYA NAK CUBA JUGA</a>
+</section>
+
+<!-- 7. TRUST -->
+<section class="trust">
+  <p class="tag tag-hijau">SELAMAT &amp; DIPERCAYAI</p>
+  <h2 class="h2">Dikilangkan Di <em>Kilang GMP</em></h2>
+  <img class="kilang" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@8b4721409e41e6bafdf9a8325d378c78d4cb1860/aset/bn-kilang.webp" width="720" height="540" alt="Proses pembungkusan Betalife Advance di kilang">
+  <div class="tr"><svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0f5238"/><path d="M7 12.5l3 3 7-7" stroke="#ffd45e" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><div><b>Label Lulus Semakan KKM</b><span>No. FLS1024180-0, Peraturan-Peraturan Makanan 1985</span></div></div>
+  <div class="tr"><svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0f5238"/><path d="M7 12.5l3 3 7-7" stroke="#ffd45e" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><div><b>Logam Berat Tidak Dikesan</b><span>Makmal Toksikologi USM, Jan 2025</span></div></div>
+  <div class="tr"><svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0f5238"/><path d="M7 12.5l3 3 7-7" stroke="#ffd45e" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><div><b>Ujian Makmal (Lab Test)</b><span>Certificate of Analysis, Halvec Laboratories, Okt 2024</span></div></div>
+</section>
+
+<!-- 8. 3 LANGKAH (flow afico: borang -> WhatsApp) -->
+<section class="langkah">
+  <p class="tag">SANGAT MUDAH</p>
+  <h2 class="h2">3 Langkah <em>Semakan Percuma</em></h2>
+  <div class="lk"><p class="no">1</p><div><b>Isi borang ringkas di bawah</b><span>30 saat sahaja. Nama, umur dan masalah utama.</span></div></div>
+  <div class="lk"><p class="no">2</p><div><b>Terus sambung ke WhatsApp</b><span>Perunding Betalife akan terima maklumat anda.</span></div></div>
+  <div class="lk"><p class="no">3</p><div><b>Dapat cadangan ikut keadaan anda</b><span>Tanya apa sahaja. Tiada paksaan beli.</span></div></div>
+  <a class="btn berdenyut" href="#borang" role="button">ISI BORANG SEKARANG</a>
+</section>
+
+<!-- 9. BORANG TAPIS (afico) -->
+<section class="borang" id="borang">
+  <p class="tag">LANGKAH TERAKHIR</p>
+  <h2 class="h2">Semakan Prostat <em>Percuma</em></h2>
+  <p class="p">Isi maklumat di bawah. Kami sambung anda ke WhatsApp dengan segera.</p>
+  <div class="kad-borang">
+    <form>
+      <label for="f-nama">Nama</label>
+      <input id="f-nama" name="name" type="text" placeholder="Contoh: Ahmad">
+      <label for="f-tel">No. WhatsApp</label>
+      <input id="f-tel" name="phone" type="tel" placeholder="Contoh: 0123456789">
+      <label for="f-siapa">Untuk siapa?</label>
+      <select id="f-siapa" name="untuk_siapa">
+        <option value="" disabled selected>Pilih satu</option>
+        <option>Diri sendiri</option>
+        <option>Ayah</option>
+        <option>Suami</option>
+      </select>
+      <label for="f-umur">Umur (orang yang ada masalah)</label>
+      <select id="f-umur" name="umur">
+        <option value="" disabled selected>Pilih umur</option>
+        <option>Bawah 40 tahun</option>
+        <option>40 hingga 49 tahun</option>
+        <option>50 hingga 59 tahun</option>
+        <option>60 hingga 69 tahun</option>
+        <option>70 tahun ke atas</option>
+      </select>
+      <label for="f-masalah">Masalah utama</label>
+      <select id="f-masalah" name="masalah">
+        <option value="" disabled selected>Pilih masalah</option>
+        <option>Kerap kencing waktu malam</option>
+        <option>Menitis lepas kencing</option>
+        <option>Kencing tersekat-sekat</option>
+        <option>Tak puas, tak lawas</option>
+        <option>Lebih dari satu masalah</option>
+      </select>
+      <button type="submit">HANTAR &amp; SAMBUNG WHATSAPP</button>
+    </form>
+    <p class="selamat">Maklumat anda dirahsiakan.</p>
+  </div>
+</section>
+
+<!-- 10. KAKI -->
+<section class="kaki">
+  <p>*Betalife Advance ialah makanan tambahan, bukan pengganti ubat. Hasil berbeza bagi setiap individu.</p>
+  <p>Ada darah tinggi, kencing manis atau sedang makan ubat hospital? Tanya doktor dahulu.</p>
+  <p>© Totalmen Sdn. Bhd.</p>
+</section>
+
+</div>
+<script>
+document.querySelectorAll('[data-countdown]').forEach(function (c) {
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function tick() {
+    var now = new Date(), end = new Date(now); end.setHours(23, 59, 59, 999);
+    var s = Math.max(0, Math.floor((end - now) / 1000));
+    var v = {hour: Math.floor(s / 3600), minute: Math.floor(s % 3600 / 60), second: s % 60};
+    c.querySelectorAll('[data-unit]').forEach(function (u) { u.textContent = pad(v[u.dataset.unit]); });
+  }
+  tick(); setInterval(tick, 1000);
+});
+</script>
+</body>
+</html>
