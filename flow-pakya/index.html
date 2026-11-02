@@ -29,12 +29,9 @@ img{display:block;max-width:100%;height:auto}
 
 .kepala{background:#ffffff;padding:10px 0;box-shadow:0 6px 18px -12px rgba(11,58,36,.45)}
 .kepala-in{display:flex;align-items:center;justify-content:space-between;gap:14px}
-.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
-.logo-tm{padding:4px 9px;border:2px solid #1f9d46;border-radius:99px;font:800 14px/1 'Be Vietnam Pro',sans-serif;color:#1f9d46}
-.logo-bl{font:800 26px/1 'Be Vietnam Pro',sans-serif;color:#1f9d46}
-.logo-ad{font:800 15px/1 'Be Vietnam Pro',sans-serif;color:#f39200}
+.logo{width:auto;height:20px}
 .menu{display:none}
-.menu-a{font:600 16px/1 'Be Vietnam Pro',sans-serif;color:#10231a;text-decoration:none;transition:.25s}
+.menu-a{font:600 16px/1 'Be Vietnam Pro',sans-serif;color:#10231a;text-decoration:none;white-space:nowrap;transition:.25s}
 .menu-a:hover{color:#1f9d46}
 .cod{display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:99px;background:#e9f7ec}
 .cod-t{font:800 15px/1 'Be Vietnam Pro',sans-serif;color:#0b3a24}
@@ -88,11 +85,11 @@ img{display:block;max-width:100%;height:auto}
 
 
 @media (min-width:900px){
-  .menu{display:flex;gap:26px}
+  .menu{display:flex;gap:22px}
   .cod{display:none}
-  .tempah-k{display:block;padding:13px 22px;border-radius:99px;background:#0b3a24;color:#ffffff;text-decoration:none;font:800 16px/1 'Be Vietnam Pro',sans-serif;transition:.25s}
+  .tempah-k{display:block;white-space:nowrap;padding:13px 22px;border-radius:99px;background:#0b3a24;color:#ffffff;text-decoration:none;font:800 16px/1 'Be Vietnam Pro',sans-serif;transition:.25s}
   .tempah-k:hover{background:#1f9d46;transform:translateY(-2px)}
-  .logo-bl{font-size:30px}
+  .logo{height:24px}
   .hero{padding:40px 0 56px}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
   .hero-kiri{order:1}
@@ -106,7 +103,7 @@ img{display:block;max-width:100%;height:auto}
   .hero-img{max-width:500px;margin:0 auto}
   .eb-m{display:none}
   .eb-d{display:block}
-  .bar{display:none}
+  .bar-in{max-width:560px;border-radius:99px}
 }
 
 </style>
@@ -126,11 +123,7 @@ img{display:block;max-width:100%;height:auto}
 
 <section class="kepala" id="kepala">
   <div class="wrap kepala-in">
-    <div class="logo">
-      <span class="logo-tm">TOTALMEN</span>
-      <span class="logo-bl">betalife</span>
-      <span class="logo-ad">ADVANCE</span>
-    </div>
+    <img class="logo" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/logo-betalife.png" width="1267" height="95" alt="Totalmen Betalife Advance">
     <div class="menu">
       <a class="menu-a" href="#masalah" role="button">Masalah</a>
       <a class="menu-a" href="#pakar" role="button">Kata Pakar</a>
@@ -150,17 +143,17 @@ img{display:block;max-width:100%;height:auto}
     <div class="eyebrow eb-m">Untuk lelaki 40 tahun ke atas, dan anak yang risaukan ayah</div>
     <div class="hero-grid">
       <div class="hero-kanan">
-        <img class="hero-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/hero-roy-dr.webp" width="840" height="1050" alt="Roy Azman, Duta Rasmi Totalmen, dan Dr. Ahmad Mustaqim, Penasihat Kesihatan Totalmen, bersama Betalife Advance">
+        <img class="hero-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/hero-roy-dr.webp" width="840" height="1050" alt="Roy Azman, Duta Rasmi Totalmen, dan Dr. Ahmad Mustaqim, Penasihat Kesihatan Totalmen, bersama Betalife Advance">
         <div class="duta">
           <div class="duta-k"><p class="duta-n">Roy Azman</p><p class="duta-p">Duta Rasmi Totalmen</p></div>
           <div class="duta-k duta-k2"><p class="duta-n">Dr. Ahmad Mustaqim</p><p class="duta-p">Penasihat Kesihatan</p></div>
         </div>
         <div class="sijil">
-          <img class="s1" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-kkm.png" width="200" height="200" alt="Kementerian Kesihatan Malaysia">
-          <img class="s2" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-halal.png" width="200" height="200" alt="Halal Malaysia">
-          <img class="s3" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-gmp.png" width="200" height="200" alt="GMP Certified">
-          <img class="s4" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-haccp.png" width="200" height="200" alt="HACCP Certified">
-          <img class="s5" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-standards.png" width="200" height="200" alt="Standards Malaysia">
+          <img class="s1" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/sijil-kkm.png" width="200" height="200" alt="Kementerian Kesihatan Malaysia">
+          <img class="s2" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/sijil-halal.png" width="200" height="200" alt="Halal Malaysia">
+          <img class="s3" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/sijil-gmp.png" width="200" height="200" alt="GMP Certified">
+          <img class="s4" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/sijil-haccp.png" width="200" height="200" alt="HACCP Certified">
+          <img class="s5" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@a407ed69ddd7c5e14efd1c294d3fdedb8c1c0da0/flow-pakya/aset/sijil-standards.png" width="200" height="200" alt="Standards Malaysia">
         </div>
         <p class="sijil-t">Lulus KKM, Halal JAKIM, GMP dan HACCP</p>
       </div>
