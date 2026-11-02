@@ -1,0 +1,18 @@
+<!-- Betalife Flow PakYa: thumbnail video tersuai. Tampal di Settings > Insert Code > Body. -->
+<script>
+(function(){
+  var B="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@0aa99e2ce99dbcc63280be1f12c5eb902c7c2787/flow-pakya/aset/";
+  var M={"WyqZxP99Xlo":"vt-1","OOVw9COjktM":"vt-2","OOvAbYkl_Mw":"vt-3","wLx4nV1UQW8":"vt-4","BcMHeVMfOkU":"vt-5","rARd1D7tXro":"vt-6","LvIb7BAi4Vc":"vt-roy","HiTHtCRgn3c":"vt-azlee"};
+  function run(){
+    document.querySelectorAll('.ladi-video-background,.ladi-video').forEach(function(e){
+      var s=(e.getAttribute('style')||'')+' '+getComputedStyle(e).backgroundImage+' '+(e.closest('.ladi-element')?e.closest('.ladi-element').outerHTML.slice(0,600):'');
+      for(var k in M){ if(s.indexOf(k)>-1){ var t=e.classList.contains('ladi-video')?(e.querySelector('.ladi-video-background')||e):e;
+        t.style.setProperty('background-image','url("'+B+M[k]+'.webp")','important');
+        t.style.setProperty('background-size','cover','important');
+        t.style.setProperty('background-position','center','important'); break; } }
+    });
+  }
+  run(); document.addEventListener('DOMContentLoaded',run); window.addEventListener('load',run);
+  var n=0, iv=setInterval(function(){run(); if(++n>10) clearInterval(iv);},800);
+})();
+</script>
