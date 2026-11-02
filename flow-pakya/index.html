@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ladipage-rules" content="v2">
+<title>Betalife Advance - Totalmen Malaysia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Be Vietnam Pro',sans-serif;background:#f6faf3;color:#10231a}
+img{display:block;max-width:100%;height:auto}
+#btl{width:100%;margin:0 auto;background:#f6faf3}
+#btl section{position:relative}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+
+.amanah{background:#c6f24e;padding:9px 0}
+.amanah-view{overflow:hidden}
+.amanah-track{display:flex;gap:34px;width:max-content;animation:jalan 38s linear infinite}
+.amanah-i{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.amanah-i svg{flex:0 0 auto}
+.amanah-t{font:700 15px/1.2 'Be Vietnam Pro',sans-serif;color:#0b3a24}
+@keyframes jalan{to{transform:translateX(-50%)}}
+
+
+.kepala{background:#ffffff;padding:10px 0;box-shadow:0 6px 18px -12px rgba(11,58,36,.45)}
+.kepala-in{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo-tm{padding:4px 9px;border:2px solid #1f9d46;border-radius:99px;font:800 14px/1 'Be Vietnam Pro',sans-serif;color:#1f9d46}
+.logo-bl{font:800 26px/1 'Be Vietnam Pro',sans-serif;color:#1f9d46}
+.logo-ad{font:800 15px/1 'Be Vietnam Pro',sans-serif;color:#f39200}
+.menu{display:none}
+.menu-a{font:600 16px/1 'Be Vietnam Pro',sans-serif;color:#10231a;text-decoration:none;transition:.25s}
+.menu-a:hover{color:#1f9d46}
+.cod{display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:99px;background:#e9f7ec}
+.cod-t{font:800 15px/1 'Be Vietnam Pro',sans-serif;color:#0b3a24}
+.tempah-k{display:none}
+
+
+.hero{background-color:#103724;padding:18px 0 34px}
+.sijil{display:flex;justify-content:center;gap:10px;margin:18px 0 0}
+.sijil img{width:56px;height:56px;border-radius:50%;box-shadow:0 8px 16px -6px rgba(0,0,0,.6);animation:float 3.2s ease-in-out infinite}
+.sijil .s2{animation-delay:.3s}
+.sijil .s3{animation-delay:.6s}
+.sijil .s4{animation-delay:.9s}
+.sijil .s5{animation-delay:1.2s}
+.sijil-t{margin:10px 0 0;text-align:center;font:700 15px/1.3 'Be Vietnam Pro',sans-serif;color:#c6f24e}
+.kim{background:linear-gradient(110deg,#c6f24e 40%,#ffffff 50%,#c6f24e 60%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:kimc 2.6s linear infinite}
+@keyframes kimc{from{background-position:150% 0}to{background-position:-50% 0}}
+.denyut{animation:breathe 2.4s ease-in-out infinite}
+.hero-grid{display:flex;flex-direction:column}
+.eyebrow{display:block;width:fit-content;margin:0 auto;padding:8px 14px;border-radius:99px;background:#163f2b;border:1px solid #2f7a4d;font:700 15px/1.3 'Be Vietnam Pro',sans-serif;color:#c6f24e;text-align:center}
+.eb-d{display:none}
+.hero-img{margin:14px auto 0;width:100%;max-width:440px;animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.duta{display:flex;gap:10px;justify-content:center;margin:2px 0 0}
+.duta-k{padding:9px 12px;border-radius:12px;background:#c6f24e;box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+.duta-k2{background:#ffffff}
+.duta-n{margin:0;font:800 16px/1.2 'Be Vietnam Pro',sans-serif;color:#0b3a24}
+.duta-p{margin:3px 0 0;font:600 15px/1.2 'Be Vietnam Pro',sans-serif;color:#1d5a38}
+.h1{margin:22px 0 0;text-align:center;font:400 40px/1.08 Anton,Impact,sans-serif;color:#ffffff;text-transform:uppercase}
+.h1-2{margin:0}
+.lime{color:#c6f24e}
+.oren{color:#ffb547}
+.sub{margin:16px 0 0;text-align:center;font:500 19px/1.55 'Be Vietnam Pro',sans-serif;color:#dcefe2}
+.sub b{color:#ffffff}
+.anak{margin:20px 0 0;padding:14px 16px;border-radius:14px;background:#ffe14d;box-shadow:0 10px 22px -10px rgba(0,0,0,.55)}
+.anak-t{margin:0;text-align:center;font:800 19px/1.4 'Be Vietnam Pro',sans-serif;color:#10231a}
+.bukti{display:flex;flex-direction:column;align-items:center;margin:20px 0 0}
+.bukti-t{margin:8px 0 0;text-align:center;font:600 16px/1.45 'Be Vietnam Pro',sans-serif;color:#dcefe2}
+.cip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:20px 0 0}
+.cip-k{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;border-radius:12px;background:#123f2a;border:1px solid #2a6b45}
+.cip-t{margin:0;text-align:center;font:700 15px/1.3 'Be Vietnam Pro',sans-serif;color:#ffffff}
+
+
+.bar{background:#ffffff;padding:8px 0 10px;box-shadow:0 -8px 22px -12px rgba(11,58,36,.5)}
+.bar-in{display:grid;grid-template-columns:1fr 1fr 1.2fr 1fr 1fr;align-items:end;max-width:480px;margin:0 auto;padding:0 6px}
+.bar-a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none}
+.bar-t{font:700 15px/1 'Be Vietnam Pro',sans-serif;color:#2c4a38}
+.bar-o{display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar-bulat{display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background-color:#f39200;background-image:linear-gradient(180deg,#ffad2e,#e57f00);box-shadow:0 8px 18px -6px rgba(229,127,0,.8);animation:breathe 2.4s ease-in-out infinite}
+.bar-ot{font:800 15px/1 'Be Vietnam Pro',sans-serif;color:#e57f00}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+
+@media (min-width:900px){
+  .menu{display:flex;gap:26px}
+  .cod{display:none}
+  .tempah-k{display:block;padding:13px 22px;border-radius:99px;background:#0b3a24;color:#ffffff;text-decoration:none;font:800 16px/1 'Be Vietnam Pro',sans-serif;transition:.25s}
+  .tempah-k:hover{background:#1f9d46;transform:translateY(-2px)}
+  .logo-bl{font-size:30px}
+  .hero{padding:40px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .hero-kiri{order:1}
+  .hero-kanan{order:2}
+  .eyebrow{margin:0}
+  .h1{text-align:left;font-size:58px}
+  .sub{text-align:left;font-size:20px}
+  .anak-t{text-align:left}
+  .bukti{align-items:flex-start}
+  .bukti-t{text-align:left}
+  .hero-img{max-width:500px;margin:0 auto}
+  .eb-m{display:none}
+  .eb-d{display:block}
+  .bar{display:none}
+}
+
+</style>
+</head>
+<body>
+<div id="btl">
+
+
+<section class="amanah" id="amanah">
+  <div class="amanah-view">
+    <div class="amanah-track" role="marquee">
+      <div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><span class="amanah-t">COD, bayar bila barang sampai</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></svg><span class="amanah-t">Jaminan wang dikembalikan</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></svg><span class="amanah-t">Lulus KKM dan Halal JAKIM</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></g></svg><span class="amanah-t">1000MG setiap tablet</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/></g></svg><span class="amanah-t">Tongkat Ali, Delima, Saw Palmetto</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6L4.5 18.5A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-2.5L14 8V2"/><path d="M7 15h10"/></g></svg><span class="amanah-t">3X lebih penyerapan, terbukti klinikal</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.6c2.8-.3 4.9 1.4 5.5 4.4"/></g></svg><span class="amanah-t">Pilihan Roy Azman dan Azlee Senario</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><span class="amanah-t">Hantar ke seluruh Malaysia</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><span class="amanah-t">COD, bayar bila barang sampai</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></svg><span class="amanah-t">Jaminan wang dikembalikan</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></svg><span class="amanah-t">Lulus KKM dan Halal JAKIM</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></g></svg><span class="amanah-t">1000MG setiap tablet</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/></g></svg><span class="amanah-t">Tongkat Ali, Delima, Saw Palmetto</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6L4.5 18.5A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-2.5L14 8V2"/><path d="M7 15h10"/></g></svg><span class="amanah-t">3X lebih penyerapan, terbukti klinikal</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.6c2.8-.3 4.9 1.4 5.5 4.4"/></g></svg><span class="amanah-t">Pilihan Roy Azman dan Azlee Senario</span></div><div class="amanah-i"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#0b3a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><span class="amanah-t">Hantar ke seluruh Malaysia</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="kepala" id="kepala">
+  <div class="wrap kepala-in">
+    <div class="logo">
+      <span class="logo-tm">TOTALMEN</span>
+      <span class="logo-bl">betalife</span>
+      <span class="logo-ad">ADVANCE</span>
+    </div>
+    <div class="menu">
+      <a class="menu-a" href="#masalah" role="button">Masalah</a>
+      <a class="menu-a" href="#pakar" role="button">Kata Pakar</a>
+      <a class="menu-a" href="#formula" role="button">Formula</a>
+      <a class="menu-a" href="#testimoni" role="button">Testimoni</a>
+      <a class="menu-a" href="#harga" role="button">Harga</a>
+      <a class="menu-a" href="#faq" role="button">FAQ</a>
+    </div>
+    <a class="tempah-k denyut" href="#harga" role="button">Tempah Sekarang</a>
+    <div class="cod"><svg width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#1f9d46" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><span class="cod-t">COD</span></div>
+  </div>
+</section>
+
+
+<section class="hero" id="utama">
+  <div class="wrap">
+    <div class="eyebrow eb-m">Untuk lelaki 40 tahun ke atas, dan anak yang risaukan ayah</div>
+    <div class="hero-grid">
+      <div class="hero-kanan">
+        <img class="hero-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/hero-roy-dr.webp" width="840" height="1050" alt="Roy Azman, Duta Rasmi Totalmen, dan Dr. Ahmad Mustaqim, Penasihat Kesihatan Totalmen, bersama Betalife Advance">
+        <div class="duta">
+          <div class="duta-k"><p class="duta-n">Roy Azman</p><p class="duta-p">Duta Rasmi Totalmen</p></div>
+          <div class="duta-k duta-k2"><p class="duta-n">Dr. Ahmad Mustaqim</p><p class="duta-p">Penasihat Kesihatan</p></div>
+        </div>
+        <div class="sijil">
+          <img class="s1" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-kkm.png" width="200" height="200" alt="Kementerian Kesihatan Malaysia">
+          <img class="s2" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-halal.png" width="200" height="200" alt="Halal Malaysia">
+          <img class="s3" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-gmp.png" width="200" height="200" alt="GMP Certified">
+          <img class="s4" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-haccp.png" width="200" height="200" alt="HACCP Certified">
+          <img class="s5" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@374c2af453bf81474450ae265a6721398d26330c/flow-pakya/aset/sijil-standards.png" width="200" height="200" alt="Standards Malaysia">
+        </div>
+        <p class="sijil-t">Lulus KKM, Halal JAKIM, GMP dan HACCP</p>
+      </div>
+      <div class="hero-kiri">
+        <div class="eyebrow eb-d">Untuk lelaki 40 tahun ke atas, dan anak yang risaukan ayah</div>
+        <h1 class="h1">Bangun kencing<br>5 kali semalam</h1>
+        <div class="h1 h1-2 kim">bukan sebab tua.</div>
+        <p class="sub">Itu tanda <b>prostat sedang membengkak</b> dan menekan saluran kencing. Ramai pakcik yang amalkan Betalife Advance kini cuma bangun <b>1 hingga 2 kali</b>, dan tidur lena sampai Subuh.</p>
+        <div class="anak"><p class="anak-t">Anak-anak, ayah takkan mengadu. Tapi dialah yang bangun ke tandas setiap malam.</p></div>
+        <div class="bukti">
+          <svg width="150" height="28" viewBox="0 0 120 22"><path d="M12 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#ffc83d"/><path d="M36 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#ffc83d"/><path d="M60 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#ffc83d"/><path d="M84 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#ffc83d"/><path d="M108 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#ffc83d"/></svg>
+          <p class="bukti-t">Pilihan Roy Azman, Azlee Senario dan ramai pakcik seluruh Malaysia. Ramai dah repeat order kali ke-2 dan ke-3.</p>
+        </div>
+        <div class="cip">
+          <div class="cip-k"><svg width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg><p class="cip-t">COD, bayar bila sampai</p></div>
+          <div class="cip-k"><svg width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></svg><p class="cip-t">Jaminan wang dikembalikan</p></div>
+          <div class="cip-k"><svg width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/></g></svg><p class="cip-t">Tongkat Ali, Delima, Saw Palmetto</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bar" id="bar">
+  <div class="bar-in">
+    <div class="bar-a"><svg width="26" height="26" viewBox="0 0 24 24"><g fill="none" stroke="#2c4a38" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></g></svg><a class="bar-t" href="#utama" role="button">Utama</a></div>
+    <div class="bar-a"><svg width="26" height="26" viewBox="0 0 24 24"><g fill="none" stroke="#2c4a38" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5"/><path d="M12 15v3M10.5 16.5h3"/></g></svg><a class="bar-t" href="#pakar" role="button">Pakar</a></div>
+    <div class="bar-o"><div class="bar-bulat"><svg width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 1.9-1.4L22 7H6"/><circle cx="9.5" cy="20" r="1.6"/><circle cx="17.5" cy="20" r="1.6"/></g></svg></div><a class="bar-ot" href="#harga" role="button">Tempah</a></div>
+    <div class="bar-a"><svg width="26" height="26" viewBox="0 0 24 24"><g fill="none" stroke="#2c4a38" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></g></svg><a class="bar-t" href="#testimoni" role="button">Ulasan</a></div>
+    <div class="bar-a"><svg width="26" height="26" viewBox="0 0 24 24"><g fill="none" stroke="#2c4a38" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.4 9.2a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.4-2.6 4"/><path d="M12 17.6v.2"/></g></svg><a class="bar-t" href="#faq" role="button">FAQ</a></div>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>
