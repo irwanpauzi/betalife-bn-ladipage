@@ -376,85 +376,199 @@ img{display:block;max-width:100%;height:auto}
   .stat3{grid-template-columns:repeat(3,220px);justify-content:center}
 }
 
-#btl{background:#103724}
-.sek{background-color:#103724;background-image:radial-gradient(ellipse at 50% 0%,#1b5a3a 0%,#103724 62%)}
-.putih,.kertas,.hijau-m{background-color:#103724}
-.sek:nth-of-type(even){background-color:#0c2d1d;background-image:radial-gradient(ellipse at 50% 0%,#164a30 0%,#0c2d1d 62%)}
-.h2{color:#ffffff}
-.p{color:#d6eadc}
-.p b{color:#ffe14d}
-.btn-nota,.ss{color:#cfe5d6}
-.vid-nama{color:#ffffff}
-.pakar-nama{color:#ffffff}
-.pakar-p{color:#c6f24e}
+#btl{background:#fffdf7}
+.sek,.putih,.kertas,.hijau-m{background:#fffdf7}
+.sek.alt{background:#fff3f1}
+.sek.mint{background:#f1faf0}
+.sek.gelap{background-color:#103724}
 
 
-.simp,.bubble,.fungsi,.sm,.lk,.pk,.surat,.jamin,.tg{border-color:transparent;box-shadow:0 18px 34px -18px rgba(0,0,0,.65)}
-.simp{background:#ffffff}
-.bubble{background:#ffffff;color:#1d3326}
-.bubble-k{background:#fff6d6}
-.ts{box-shadow:0 20px 36px -18px rgba(0,0,0,.7)}
+.tag{display:block;width:fit-content;margin:0 auto;padding:0;background:transparent;border-radius:0;font:800 15px/1.2 'Be Vietnam Pro',sans-serif;color:#e57f00}
+.tag-merah{color:#dc2626}
+.tag-oren{color:#e57f00}
+.tag-lime{color:#c6f24e}
+.merah-bg .tag{color:#ffb4b4}
+.h2{margin:10px 0 0;text-align:center;font:800 30px/1.22 'Be Vietnam Pro',sans-serif;color:#10231a;text-transform:none}
+.h2-sorot{display:block;width:fit-content;margin:6px auto 0;padding:2px 12px 4px;border-radius:10px;background:#ffe14d;text-align:center;font:800 30px/1.22 'Be Vietnam Pro',sans-serif;color:#10231a}
+.gelap .h2,.merah-bg .h2{color:#ffffff}
+.p{color:#3d5446}
+.p b{color:#10231a}
+.gelap .p,.merah-bg .p{color:#d6eadc}
+.gelap .p b{color:#ffe14d}
+.vid-nama,.pakar-nama{color:#10231a}
+.pakar-p{color:#1f9d46}
+
+
+.btn{border-radius:99px;background-color:#ffc21a;background-image:linear-gradient(180deg,#ffd84d,#ffb000);color:#10231a;font:800 20px/1.2 'Be Vietnam Pro',sans-serif;box-shadow:0 10px 22px -8px rgba(229,127,0,.65)}
+.btn:active{transform:translateY(3px);box-shadow:0 4px 10px -4px rgba(229,127,0,.65)}
+.btn-nota,.ss{color:#557061}
+
+
+.simp,.bubble,.fungsi,.sm,.lk,.pk,.surat,.jamin,.tg,.ts,.faq details{background:#ffffff;border:1px solid #eee6d8;border-radius:20px;box-shadow:0 14px 30px -20px rgba(40,30,10,.45)}
 .faq{background:transparent;padding:0}
-.faq details{background:#ffffff;border:0;box-shadow:0 12px 24px -16px rgba(0,0,0,.6)}
-.jawab{background-color:#0a2417;border:2px solid #2f7a4d}
-.statbesar{box-shadow:0 18px 34px -16px rgba(0,0,0,.6)}
+.ts{padding:10px}
+.ts-kap{border-radius:12px}
 
 
-.jalan2{align-items:stretch}
+.babak-grid{display:grid;grid-template-columns:1fr;gap:18px;margin:26px 0 0}
+.babak{border-radius:20px;background-color:#14110e;box-shadow:0 18px 34px -18px rgba(0,0,0,.6);transition:.3s}
+.babak:hover{transform:translateY(-6px)}
+.babak img{width:100%;display:block;border-radius:20px 20px 0 0}
+.babak-isi{padding:0 18px 20px}
+.babak-pil{display:block;width:fit-content;margin:0;padding:5px 10px;border-radius:99px;background:#3a1414;border:1px solid #a33;font:700 14px/1 'Be Vietnam Pro',sans-serif;color:#ffd0d0}
+.babak-h{margin:10px 0 0;font:800 20px/1.3 'Be Vietnam Pro',sans-serif;color:#ffffff}
+.babak-garis{width:36px;height:3px;margin:10px 0 0;border-radius:3px;background:#ef4444}
+.babak-t{margin:10px 0 0;font:500 16px/1.5 'Be Vietnam Pro',sans-serif;color:#d9d2c8}
+.notif{display:flex;align-items:center;gap:8px;width:fit-content;margin:0 auto;padding:7px 12px;border-radius:12px 12px 0 0;background:#ffffff;box-shadow:0 -4px 12px -6px rgba(0,0,0,.3)}
+.notif-t{margin:0;font:700 14px/1.2 'Be Vietnam Pro',sans-serif;color:#10231a}
+.notif-b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#ef4444;font:800 12px/1 'Be Vietnam Pro',sans-serif;color:#fff}
+
+
+.bubble{border-radius:18px 18px 18px 4px;color:#2c4235}
+.bubble-k{border-radius:18px 18px 4px 18px;background:#fff6d6;border-color:#f5dd8a}
+.jawab{background-color:#103724;border:0;border-radius:20px}
+
+
+.jalan2{gap:0;border-radius:24px;box-shadow:0 20px 40px -24px rgba(40,30,10,.55)}
 .jln{display:flex;flex-direction:column}
-.jln-a{background:#fff1f1;border:0}
-.jln-b{background-color:#0a2417;border:2px solid #c6f24e}
-.jln-img{width:100%;height:auto;margin:14px 0 6px;border-radius:14px}
+.jln-a{background:#ffe9ec;border:0;border-radius:24px 24px 0 0}
+.jln-b{background-color:#e3f6e3;border:0;border-radius:0 0 24px 24px}
+.jln-tag{color:#8a6a6a;font-size:14px}
+.jln-b .jln-tag{color:#4b7a58}
+.jln-h{font:800 30px/1.1 'Be Vietnam Pro',sans-serif;color:#dc2626;text-transform:uppercase}
+.jln-b .jln-h{color:#1f9d46}
+.jln-b .baris-t{color:#10231a}
+.baris-t{color:#3b2a2a}
+.jln-img{width:100%;margin:14px 0 6px;border-radius:16px}
 
 
-.hb{background-color:#0a2417;border:2px solid #2f7a4d}
-.hb:hover{border-color:#c6f24e}
+.sek.merah-bg{background-color:#2a0d0d;background-image:radial-gradient(ellipse at 50% 0%,#5a1616 0%,#2a0d0d 65%)}
 
 
-.st{background-color:#0a2417;border:2px solid #2f7a4d}
-.kira{background-color:#0a2417;border:2px solid #ffe14d}
+.hb{background:#ffffff;border:1px solid #eee6d8;border-radius:20px;box-shadow:0 14px 30px -20px rgba(40,30,10,.45)}
+.hb-n{color:#1f9d46}
+.hb-t{color:#3d5446}
+
+
+.st{background:#ffffff;border:1px solid #eee6d8;border-radius:16px}
+.st-n{color:#1f9d46}
+.st-t{color:#3d5446}
+.kira{background-color:#103724;border:0;border-radius:20px}
 
 
 .gaya-lebar{box-shadow:none;border-radius:0;animation:float 5s ease-in-out infinite}
-.cara-img{border-radius:0}
+.cara-img{border-radius:0;max-width:240px}
+.f-kanan .fungsi{margin-top:0}
 
 
 .pk-top{background:#fffaf0;border:3px solid #f39200}
-.pk{border:0}
+.hadiah{margin:12px 0 0;padding:10px;border-radius:14px;background:#fff6d6;border:1px dashed #e5b300}
+.hadiah-h{margin:0 0 6px;text-align:center;font:800 15px/1.2 'Be Vietnam Pro',sans-serif;color:#b45309}
+.hadiah img{width:100%;border-radius:10px}
 
 
-.lk{background:#ffffff}
-.surat{border:0}
-.borang{background-color:#0c2d1d}
-.borang .h2{color:#ffffff}
-.borang .p{color:#d6eadc}
+.cd-l{color:#dc2626}
 
 
+.borang{background:#f1faf0}
+.borang .h2{color:#10231a}
 .ab-a{border:0}
-.ab-b{background:#eaf6e4;border:3px solid #c6f24e}
-.ps{color:#d6eadc}
-.ps b{color:#ffe14d}
+.ab-b{border:2px solid #1f9d46}
+.ps{color:#3d5446}
+.ps b{color:#10231a}
 
 
 @keyframes softUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.simp,.ts,.pk,.hb,.bubble,.lk,.risk,.sm,.jln,.ab-k{animation:softUp .6s both}
-.ts:hover,.pk:hover,.lk:hover,.jln:hover{transform:translateY(-6px);box-shadow:0 26px 40px -18px rgba(0,0,0,.8)}
-.ts,.pk,.lk,.jln{transition:.3s}
+.simp,.ts,.pk,.hb,.bubble,.lk,.risk,.sm,.babak,.ab-k{animation:softUp .6s both}
+.ts,.pk,.lk{transition:.3s}
+.ts:hover,.pk:hover,.lk:hover{transform:translateY(-6px);box-shadow:0 24px 40px -22px rgba(40,30,10,.6)}
 
-.cara-img{max-width:240px}
-.f-kanan .fungsi{margin-top:0}
 @media (min-width:900px){
-  .jalan2{max-width:1000px}
+  .h2,.h2-sorot{font-size:40px}
+  .babak-grid{grid-template-columns:repeat(3,1fr);gap:20px;max-width:1040px;margin-left:auto;margin-right:auto}
+  .jalan2{max-width:1000px;display:grid;grid-template-columns:1fr 1fr}
+  .jln-a{border-radius:24px 0 0 24px}
+  .jln-b{border-radius:0 24px 24px 0}
+  .jln{padding:26px}
   .jln-img{height:300px;object-fit:cover}
-  .jln-pot{object-fit:contain}
   .formula-grid{grid-template-columns:1fr 1fr;gap:34px;align-items:center;max-width:1040px;margin:30px auto 0}
   .f-kiri .gaya-lebar{max-width:420px;margin-top:0}
   .ts-grid .ts{margin:16px 0 0;width:100%}
   .ts-grid .ts img,.ts-grid .ts-lebar img{height:auto;object-fit:fill}
 }
-.sek.merah-bg{background-color:#2a0d0d;background-image:radial-gradient(ellipse at 50% 0%,#5a1616 0%,#2a0d0d 65%)}
 
-.cd-l{color:#ffb547}
+
+.saiz-w{margin:22px 0 0;padding:18px 14px;border-radius:20px;background:#ffffff;border:1px solid #eee6d8;box-shadow:0 14px 30px -20px rgba(40,30,10,.45)}
+.saiz-h{margin:0;text-align:center;font:800 19px/1.3 'Be Vietnam Pro',sans-serif;color:#10231a}
+.saiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 0}
+.saiz{display:flex;flex-direction:column;align-items:center;padding:10px 6px 12px;border-radius:14px;border:2px solid #eee6d8}
+.saiz img{width:84px;height:84px}
+.saiz-u{display:block;margin:6px 0 0;padding:4px 10px;border-radius:99px;font:800 14px/1 'Be Vietnam Pro',sans-serif;color:#ffffff}
+.s1{border-color:#e8d96a}.s1 .saiz-u{background:#c9a800}
+.s2{border-color:#86d3a0}.s2 .saiz-u{background:#1f9d46}
+.s3{border-color:#f3c27a}.s3 .saiz-u{background:#e57f00}
+.s4{border-color:#f3a0a0}.s4 .saiz-u{background:#dc2626}
+.saiz-o{margin:8px 0 0;text-align:center;font:800 15px/1.25 'Be Vietnam Pro',sans-serif;color:#10231a}
+.saiz-t{margin:4px 0 0;text-align:center;font:500 15px/1.35 'Be Vietnam Pro',sans-serif;color:#3d5446}
+
+
+.babak-w{display:flex;flex-direction:column;align-items:center}
+.babak-w .babak{width:100%}
+.sorot-m{background:#ffe14d}
+.ts-husin{max-width:460px;margin:22px auto 0}
+
+
+.kolaj{width:100%;max-width:820px;margin:24px auto 0;border-radius:24px;box-shadow:0 24px 44px -26px rgba(40,30,10,.6)}
+
+@media (min-width:900px){
+  .saiz-grid{grid-template-columns:repeat(4,1fr)}
+  .stat3{grid-template-columns:repeat(3,220px);justify-content:center}
+}
+.notif-b{font-size:14px;width:22px;height:22px}
+@media (min-width:900px){ .jln-pot{object-fit:contain;object-position:center bottom;background:transparent} }
+
+
+.h2{color:#0b3a24}
+.h2-sorot{background:#c6f24e;color:#0b3a24}
+.tag{color:#1f9d46}
+.tag-oren{color:#e57f00}
+.btn{background-color:#f39200;background-image:linear-gradient(180deg,#ffa82e,#e57f00);color:#ffffff;box-shadow:0 10px 22px -8px rgba(229,127,0,.7)}
+.pk-n,.pk-harga,.kira-n,.o span,.st-n,.tg-n,.statbesar-n,.kos-n,.cara-h,.jamin-h,.ab-h,.lk-n,.kanser-h,.jln-h{font-family:'Be Vietnam Pro',sans-serif;font-weight:900;text-transform:none}
+.pk-n{font-size:24px;color:#0b3a24}
+.pk-harga{font-size:46px;color:#dc2626}
+.kira-n{font-size:34px}
+.o span{font-size:30px}
+.st-n,.tg-n{font-size:28px}
+.statbesar-n{font-size:56px}
+.kos-n{font-size:32px}
+.cara-h{font-size:22px}
+.jamin-h{font-size:30px}
+.ab-h{font-size:22px}
+.lk-n{font-size:22px}
+.kanser-h{font-size:28px}
+.jln-h{font-size:26px}
+.pk-lencana{background:#1f9d46}
+.pk-top{border-color:#1f9d46;background:#f4fbf1}
+.o{background:#0b3a24}
+.o span{color:#c6f24e}
+.ts-kap{background:#ffe14d}
+.saiz-u{white-space:nowrap;font-size:15px;padding:5px 12px}
+
+
+.babak{overflow:hidden}
+@keyframes kenBurns{0%{transform:scale(1)}100%{transform:scale(1.09)}}
+.babak img{animation:kenBurns 9s ease-in-out infinite alternate}
+@keyframes heartBeat{0%{transform:scale(1)}14%{transform:scale(1.25)}28%{transform:scale(1)}42%{transform:scale(1.25)}70%{transform:scale(1)}}
+.notif-b{animation:heartBeat 1.6s infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.notif{animation:float 3s ease-in-out infinite}
+.babak-w:nth-child(2) .babak,.babak-w:nth-child(2) .notif{animation-delay:.15s}
+.babak-w:nth-child(3) .babak,.babak-w:nth-child(3) .notif{animation-delay:.3s}
+.babak-w:nth-child(4) .babak,.babak-w:nth-child(4) .notif{animation-delay:.45s}
+.babak-w:nth-child(5) .babak,.babak-w:nth-child(5) .notif{animation-delay:.6s}
+.babak-w:nth-child(6) .babak,.babak-w:nth-child(6) .notif{animation-delay:.75s}
+.kolaj{animation:softUp .8s both}
+.h2-sorot{animation:softUp .6s .15s both}
 
 </style>
 </head>
@@ -473,7 +587,7 @@ img{display:block;max-width:100%;height:auto}
 
 <section class="kepala" id="kepala">
   <div class="wrap kepala-in">
-    <img class="logo" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/logo-betalife.png" width="499" height="269" alt="Totalmen Betalife Advance">
+    <img class="logo" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/logo-betalife.png" width="499" height="269" alt="Totalmen Betalife Advance">
     <div class="menu">
       <a class="menu-a" href="#masalah" role="button">Masalah</a>
       <a class="menu-a" href="#pakar" role="button">Kata Pakar</a>
@@ -493,17 +607,17 @@ img{display:block;max-width:100%;height:auto}
     <div class="eyebrow eb-m">Untuk lelaki 40+, isteri dan anak yang risaukan mereka</div>
     <div class="hero-grid">
       <div class="hero-kanan">
-        <img class="hero-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/hero-roy-dr.webp" width="840" height="1050" alt="Roy Azman, Duta Rasmi Totalmen, dan Dr. Ahmad Mustaqim, Penasihat Kesihatan Totalmen, bersama Betalife Advance">
+        <img class="hero-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/hero-roy-dr.webp" width="840" height="1050" alt="Roy Azman, Duta Rasmi Totalmen, dan Dr. Ahmad Mustaqim, Penasihat Kesihatan Totalmen, bersama Betalife Advance">
         <div class="duta">
           <div class="duta-k"><p class="duta-n">Roy Azman</p><p class="duta-p">Duta Rasmi Totalmen</p></div>
           <div class="duta-k duta-k2"><p class="duta-n">Dr. Ahmad Mustaqim</p><p class="duta-p">Penasihat Kesihatan</p></div>
         </div>
         <div class="sijil">
-          <img class="s1" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/sijil-kkm.png" width="200" height="200" alt="Kementerian Kesihatan Malaysia">
-          <img class="s2" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/sijil-halal.png" width="200" height="200" alt="Halal Malaysia">
-          <img class="s3" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/sijil-gmp.png" width="200" height="200" alt="GMP Certified">
-          <img class="s4" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/sijil-haccp.png" width="200" height="200" alt="HACCP Certified">
-          <img class="s5" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/sijil-standards.png" width="200" height="200" alt="Standards Malaysia">
+          <img class="s1" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/sijil-kkm.png" width="200" height="200" alt="Kementerian Kesihatan Malaysia">
+          <img class="s2" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/sijil-halal.png" width="200" height="200" alt="Halal Malaysia">
+          <img class="s3" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/sijil-gmp.png" width="200" height="200" alt="GMP Certified">
+          <img class="s4" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/sijil-haccp.png" width="200" height="200" alt="HACCP Certified">
+          <img class="s5" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/sijil-standards.png" width="200" height="200" alt="Standards Malaysia">
         </div>
         <p class="sijil-t">Lulus KKM, Halal JAKIM, GMP dan HACCP</p>
       </div>
@@ -527,11 +641,11 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek putih" id="video">
+<section class="sek" id="video">
   <div class="wrap">
-    <span class="tag tag-oren">Dengar sendiri, bukan kata kami</span>
-    <h2 class="h2">Azlee Senario &amp; Roy Azman<br>pun mengaku</h2>
+    <span class="tag">Dengar sendiri, bukan kata kami</span>
+    <h2 class="h2">Azlee Senario &amp; Roy Azman</h2>
+    <div class="h2-sorot">pun mengaku</div>
     <p class="p">Mereka pun lelaki berumur. Mereka pun pernah ulang-alik ke tandas. Tekan butang main dan dengar sendiri cerita mereka.</p>
     <div class="vid-grid">
       <div>
@@ -553,7 +667,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
 <section class="persona" id="persona">
   <p class="persona-t">Page ini khas untuk tuan yang...</p>
   <div class="persona-view">
@@ -561,35 +674,32 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek kertas" id="masalah">
+<section class="sek alt" id="masalah">
   <div class="wrap">
-    <span class="tag tag-merah">Jujur dengan diri sendiri</span>
-    <h2 class="h2">Tuan alami tanda-tanda<br>macam ni?</h2>
-    <div class="grid2">
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M30 13a11 11 0 1 0 6 18 9 9 0 0 1-6-18z"/></g></svg><p class="simp-t">Bangun kencing 3 hingga 5 kali setiap malam</p></div>
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z"/></g></svg><p class="simp-t">Kencing menitis lepas keluar tandas</p></div>
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18h10M14 24h6M14 30h3"/><path d="M28 16v16"/><path d="M34 20v8"/></g></svg><p class="simp-t">Pancutan lemah, tersekat-sekat</p></div>
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16h16l-2 18H18z"/><path d="M19 22h10"/></g></svg><p class="simp-t">Rasa tak lawas, nak kencing lagi</p></div>
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34h20"/><path d="M17 34V22l7-6 7 6v12"/><path d="M24 26v4"/></g></svg><p class="simp-t">Was-was masa solat, takut terkeluar</p></div>
-      <div class="simp"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0b3a24"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="18" width="20" height="12" rx="2.5"/><path d="M35 22v4"/><path d="M15 21v6"/></g></svg><p class="simp-t">Tenaga batin makin lemah</p></div>
+    <span class="tag tag-merah">Jujur dengan diri sendiri...</span>
+    <h2 class="h2">Tuan sedang hadapi</h2>
+    <div class="h2-sorot">masalah ni?</div>
+    <div class="babak-grid">
+      <div class="babak-w"><div class="notif"><span class="notif-b">4</span><p class="notif-t">Jam 3:07 pagi, bangun kali ke-4</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-isteri.webp" width="720" height="900" alt="Gambar hiasan: Bangun 3 hingga 5 kali semalam"><div class="babak-isi"><span class="babak-pil">Kencing malam</span><p class="babak-h">Bangun 3 hingga 5 kali semalam</p><div class="babak-garis"></div><p class="babak-t">Baru lelap, dah nak ke tandas. Isteri pun ikut terjaga setiap kali.</p></div></div></div>
+      <div class="babak-w"><div class="notif"><span class="notif-b">!</span><p class="notif-t">Seluar basah lagi</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-titis.webp" width="720" height="900" alt="Gambar hiasan: Kencing menitis, tak puas"><div class="babak-isi"><span class="babak-pil">Tak lawas</span><p class="babak-h">Kencing menitis, tak puas</p><div class="babak-garis"></div><p class="babak-t">Dah keluar tandas, masih menitis. Rasa nak kencing lagi.</p></div></div></div>
+      <div class="babak-w"><div class="notif"><span class="notif-b">?</span><p class="notif-t">Wuduk batal ke tadi?</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-solat.webp" width="720" height="900" alt="Gambar hiasan: Was-was masa solat"><div class="babak-isi"><span class="babak-pil">Ibadah</span><p class="babak-h">Was-was masa solat</p><div class="babak-garis"></div><p class="babak-t">Takut terkeluar masa sujud. Solat tak lagi tenang.</p></div></div></div>
+      <div class="babak-w"><div class="notif"><span class="notif-b">2</span><p class="notif-t">Tandas kat mana ya?</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-kenduri.webp" width="720" height="900" alt="Gambar hiasan: Malu di majlis orang"><div class="babak-isi"><span class="babak-pil">Majlis</span><p class="babak-h">Malu di majlis orang</p><div class="babak-garis"></div><p class="babak-t">Asyik bangun cari tandas masa kenduri. Orang mula perasan.</p></div></div></div>
+      <div class="babak-w"><div class="notif"><span class="notif-b">!</span><p class="notif-t">R&amp;R seterusnya 25 km</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-jem.webp" width="720" height="900" alt="Gambar hiasan: Takut jalan jauh"><div class="babak-isi"><span class="babak-pil">Perjalanan</span><p class="babak-h">Takut jalan jauh</p><div class="babak-garis"></div><p class="babak-t">Jem sikit pun dah gelisah. Balik kampung kena berhenti setiap R&amp;R.</p></div></div></div>
+      <div class="babak-w"><div class="notif"><span class="notif-b">1</span><p class="notif-t">Ayah ok ke? Tak tidur lagi?</p></div><div class="babak"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-anak.webp" width="720" height="900" alt="Gambar hiasan: Anak risau dari jauh"><div class="babak-isi"><span class="babak-pil">Keluarga</span><p class="babak-h">Anak risau dari jauh</p><div class="babak-garis"></div><p class="babak-t">Ayah kata "biasalah". Tapi anak tahu ayah tak pernah tidur lena.</p></div></div></div>
     </div>
-    <div class="sorot sorot-merah">Kalau 2 tanda pun kena, prostat tuan mungkin sedang membengkak sekarang. Dan tanda-tanda ini jangan sekali-kali dipandang ringan.</div>
+    <div class="sorot sorot-merah">Kalau 2 tanda pun kena, prostat tuan mungkin sedang membengkak sekarang. Jangan sekali-kali dipandang ringan.</div>
     <div class="ts-grid ts-2">
-      <div class="ts">
-      <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-bahtiar.webp" width="720" height="720" alt="Testimoni Bahtiarmean Mean">
-      <p class="ts-kap">"Dari 4 hingga 6 kali semalam, menurun ke 1 hingga 2 kali."</p>
-    </div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-aura.webp" width="720" height="720" alt="Testimoni aurakama70"><p class="ts-kap">"Produk terbaik. Masalah berkurangan."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-bahtiar.webp" width="720" height="720" alt="Testimoni Bahtiarmean Mean"><p class="ts-kap">"Dari 4 hingga 6 kali semalam, menurun ke 1 hingga 2 kali."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-aura.webp" width="720" height="720" alt="Testimoni aurakama70"><p class="ts-kap">"Produk terbaik. Masalah berkurangan."</p></div>
     </div>
   </div>
 </section>
 
-
 <section class="sek putih" id="suara">
   <div class="wrap">
     <span class="tag">Pernah dengar suara ni dalam kepala?</span>
-    <h2 class="h2">"Takpe la,<br>nanti-nanti la..."</h2>
+    <h2 class="h2">"Takpe la,</h2>
+    <div class="h2-sorot">nanti-nanti la..."</div>
     <div class="bubble-w">
       <div class="bubble">"Biasalah, dah tua. Semua orang macam ni."</div>
       <div class="bubble bubble-k">"Malu nak cerita dengan anak-anak."</div>
@@ -603,24 +713,32 @@ img{display:block;max-width:100%;height:auto}
       <p class="jawab-s">Bukan tuan yang tak cukup usaha. Produk sebelum ni mungkin tiada bahan khusus untuk prostat.</p>
     </div>
     <div class="ts-grid ts-2">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-epul.webp" width="720" height="720" alt="Testimoni epuljebat"><p class="ts-kap">"Dah banyak kali repeat order. Produk ni memang betul-betul berkesan."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-hanif.webp" width="720" height="720" alt="Testimoni en.hanif"><p class="ts-kap">"Beli kali ke-2. Setakat ni okay, tiada kesan sampingan."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-epul.webp" width="720" height="720" alt="Testimoni epuljebat"><p class="ts-kap">"Dah banyak kali repeat order. Produk ni memang betul-betul berkesan."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-hanif.webp" width="720" height="720" alt="Testimoni en.hanif"><p class="ts-kap">"Beli kali ke-2. Setakat ni okay, tiada kesan sampingan."</p></div>
     </div>
   </div>
 </section>
 
-
-<section class="sek kertas" id="pakar">
+<section class="sek mint" id="pakar">
   <div class="wrap pakar-grid">
     <div>
-      <span class="tag">Kata Pakar</span>
-      <h2 class="h2">Puncanya satu:<br>prostat membengkak</h2>
+      <span class="tag">Kata pakar</span>
+    <h2 class="h2">Puncanya satu:</h2>
+    <div class="h2-sorot">prostat membengkak</div>
       <p class="p">Bila prostat membengkak (BPH), ia <b>menekan saluran kencing</b>. Aliran jadi lemah dan tersekat-sekat. Tuan kerap ke tandas sebab tak puas, dan bila dah kencing pula rasa tak lawas. Paling teruk, waktu malam.</p>
       <div class="statbesar">
         <p class="statbesar-n">7 / 10</p>
         <p class="statbesar-t">lelaki berumur 40 tahun ke atas akan alami bengkak prostat seiring usia.</p>
       </div>
-      <img class="saiz-img" src="https://w.ladicdn.com/s750x750/64d0957e7550bc001218243b/copy-of-kunyah-copypsd-4-20250925162559-f4koh.jpg" width="750" height="750" alt="Gambaran saiz prostat lelaki mengikut usia">
+      <div class="saiz-w">
+        <p class="saiz-h">Saiz prostat lelaki membesar seiring usia</p>
+        <div class="saiz-grid">
+          <div class="saiz s1"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/saiz-walnut.webp" width="320" height="320" alt="Sebesar walnut"><span class="saiz-u">20-an</span><p class="saiz-o">Sebesar walnut</p><p class="saiz-t">Prostat masih sihat.</p></div>
+          <div class="saiz s2"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/saiz-golf.webp" width="320" height="320" alt="Sebesar bola golf"><span class="saiz-u">40-an</span><p class="saiz-o">Sebesar bola golf</p><p class="saiz-t">Ramai mula kerap kencing.</p></div>
+          <div class="saiz s3"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/saiz-lemon.webp" width="320" height="320" alt="Sebesar lemon"><span class="saiz-u">50-an</span><p class="saiz-o">Sebesar lemon</p><p class="saiz-t">Lebih 50% lelaki terjejas.</p></div>
+          <div class="saiz s4"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/saiz-besbol.webp" width="320" height="320" alt="Sebesar besbol"><span class="saiz-u">70-an</span><p class="saiz-o">Sebesar besbol</p><p class="saiz-t">Lebih 90% lelaki terjejas.</p></div>
+        </div>
+      </div>
     </div>
     <div>
       <div class="vid-mp4"><video src="https://s.ladicdn.com/64d0957e7550bc001218243b/whatsapp-video-2025-02-28-at-24556-pm-20250301033658-cgrfv.mp4" controls playsinline preload="metadata"></video></div>
@@ -631,18 +749,18 @@ img{display:block;max-width:100%;height:auto}
   </div>
   <div class="wrap model-duo">
       <div class="model">
-        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-azlee-2.webp" width="720" height="900" alt="Azlee Senario bersama Betalife Advance">
+        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/model-azlee-2.webp" width="720" height="900" alt="Azlee Senario bersama Betalife Advance">
         <div class="model-l"><p class="model-n">Azlee Senario</p><p class="model-p">Pelawak Senario, pengguna Betalife Advance</p></div>
       </div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-adib.webp" width="720" height="720" alt="Testimoni adibnadgmi"><p class="ts-kap">"Alhamdulillah, berkesan seawal botol pertama."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-adib.webp" width="720" height="720" alt="Testimoni adibnadgmi"><p class="ts-kap">"Alhamdulillah, berkesan seawal botol pertama."</p></div>
   </div>
 </section>
 
-
 <section class="sek merah-bg" id="risiko">
   <div class="wrap">
-    <span class="tag tag-merah">Awas</span>
-    <h2 class="h2">Ini yang menunggu<br>kalau terus dibiar</h2>
+    <span class="tag">Awas</span>
+    <h2 class="h2">Ini yang menunggu</h2>
+    <div class="h2-sorot sorot-m">kalau terus dibiar</div>
     <div class="grid2 r4">
       <div class="risk"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#dc2626"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10v8"/><rect x="16" y="18" width="16" height="20" rx="4"/><path d="M18 30h12"/></g></svg><p class="risk-t">Pasang tiub kencing</p><p class="risk-s">Beg kencing tergantung di sisi, ke masjid dan ke kenduri.</p></div>
       <div class="risk"><svg width="52" height="52" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#dc2626"/><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 15v18M15 24h18"/></g></svg><p class="risk-t">Pembedahan prostat</p><p class="risk-s">Masuk dewan bedah (TURP), anak bergilir jaga di wad.</p></div>
@@ -655,6 +773,7 @@ img{display:block;max-width:100%;height:auto}
       <p class="kanser-t">Kerap kencing malam, pancutan lemah, kencing menitis. Itulah juga tanda-tanda awal kanser prostat, dan risikonya naik bila umur meningkat. Ramai lelaki anggap "biasalah dah tua", sampai doktor kata dah terlambat.</p>
       <p class="kanser-s">Jangan main tunggu. Periksa PSA di klinik, dan mula jaga prostat dari dalam malam ini juga.</p>
     </div>
+    <div class="ts ts-husin"><img src="https://w.ladicdn.com/s750x850/64d0957e7550bc001218243b/new-project-20251111074105-kpchr.jpg" width="750" height="850" alt="Testimoni Husin Suratman"><p class="ts-kap">"Setahun terpaksa pakai tiub kencing. Sebotol sahaja, saya dah bebas dari tiub."</p></div>
     <div class="kos">
       <p class="kos-n">Bedah. Wad. Cuti kerja.</p>
       <p class="kos-t">Kos pembedahan, ubat dan hari-hari di hospital jauh lebih mahal daripada ikhtiar 2 biji sehari yang tuan boleh mula malam ini.</p>
@@ -662,16 +781,16 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
 <section class="sek putih" id="banding">
   <div class="wrap">
     <span class="tag">Tuan pilih yang mana?</span>
-    <h2 class="h2">Bandingkan<br>dua jalan ni</h2>
+    <h2 class="h2">Bandingkan</h2>
+    <div class="h2-sorot">dua jalan ni</div>
     <div class="jalan2">
       <div class="jln jln-a">
         <p class="jln-tag">JALAN 1</p>
         <p class="jln-h">Biarkan je dulu</p>
-        <img class="jln-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/babak-3pagi.webp" width="720" height="720" alt="Gambar hiasan: pakcik terjaga jam 3 pagi untuk ke tandas">
+        <img class="jln-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-3pagi.webp" width="720" height="720" alt="Gambar hiasan: pakcik terjaga jam 3 pagi untuk ke tandas">
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p class="baris-t">Terus bangun 3 hingga 5 kali setiap malam</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p class="baris-t">Was-was setiap kali solat dan musafir</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#dc2626"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg><p class="baris-t">Prostat makin besar, saluran makin sempit</p></div>
@@ -682,7 +801,7 @@ img{display:block;max-width:100%;height:auto}
       <div class="jln jln-b">
         <p class="jln-tag">JALAN 2</p>
         <p class="jln-h">Ikhtiar dari dalam</p>
-        <img class="jln-img jln-pot" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/potong-capai.webp" width="760" height="760" alt="Tangan mencapai botol Betalife Advance">
+        <img class="jln-img jln-pot" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/model-gembira.webp" width="684" height="900" alt="Pengguna gembira bersama Betalife Advance">
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">2 biji sebelum tidur, telan atau kunyah</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Saw Palmetto bantu kecutkan bengkak prostat</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Ramai rasa perubahan seawal hari ke-3</p></div>
@@ -691,26 +810,26 @@ img{display:block;max-width:100%;height:auto}
       </div>
     </div>
     <div class="ts-grid ts-2">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-nasar.webp" width="720" height="720" alt="Testimoni nasarsyaza"><p class="ts-kap">"Berkesan untuk kerap kencing malam. Ini kali kedua repeat order."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-abran.webp" width="720" height="720" alt="Testimoni abran62"><p class="ts-kap">"Dah seminggu makan, kencing tak sekerap sebelum ni dan agak lawas."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-nasar.webp" width="720" height="720" alt="Testimoni nasarsyaza"><p class="ts-kap">"Berkesan untuk kerap kencing malam. Ini kali kedua repeat order."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-abran.webp" width="720" height="720" alt="Testimoni abran62"><p class="ts-kap">"Dah seminggu makan, kencing tak sekerap sebelum ni dan agak lawas."</p></div>
     </div>
     <a class="btn" href="#harga" role="button">Saya Pilih Jalan 2</a>
   </div>
 </section>
 
-
-<section class="sek kertas" id="formula">
+<section class="sek mint" id="formula">
   <div class="wrap">
     <span class="tag">Apa dalam setiap tablet</span>
-    <h2 class="h2">3 herba,<br>1000mg setiap tablet</h2>
+    <h2 class="h2">3 herba,</h2>
+    <div class="h2-sorot">1000mg setiap tablet</div>
     <div class="herba">
-      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/herba-saw.webp" width="400" height="400" alt="Saw Palmetto"><div><p class="hb-n">Saw Palmetto</p><p class="hb-t">Bahan utama. Mengandungi sebatian aktif yang bantu kurangkan pembesaran prostat dan legakan tekanan pada saluran kencing.</p></div></div>
-      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/herba-tongkat.webp" width="400" height="400" alt="Tongkat Ali"><div><p class="hb-n">Tongkat Ali</p><p class="hb-t">Galakkan peredaran darah dalam sistem pembiakan lelaki, sokong tenaga dalaman dan keinginan.</p></div></div>
-      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/herba-delima.webp" width="400" height="400" alt="Delima"><div><p class="hb-n">Delima</p><p class="hb-t">Buah kaya antioksidan, sokongan semula jadi untuk kesihatan lelaki berumur.</p></div></div>
+      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/herba-saw.webp" width="400" height="400" alt="Saw Palmetto"><div><p class="hb-n">Saw Palmetto</p><p class="hb-t">Bahan utama. Mengandungi sebatian aktif yang bantu kurangkan pembesaran prostat dan legakan tekanan pada saluran kencing.</p></div></div>
+      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/herba-tongkat.webp" width="400" height="400" alt="Tongkat Ali"><div><p class="hb-n">Tongkat Ali</p><p class="hb-t">Galakkan peredaran darah dalam sistem pembiakan lelaki, sokong tenaga dalaman dan keinginan.</p></div></div>
+      <div class="hb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/herba-delima.webp" width="400" height="400" alt="Delima"><div><p class="hb-n">Delima</p><p class="hb-t">Buah kaya antioksidan, sokongan semula jadi untuk kesihatan lelaki berumur.</p></div></div>
     </div>
     <div class="formula-grid">
       <div class="f-kiri">
-        <img class="gaya-lebar" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/potong-tablet.webp" width="714" height="760" alt="Tablet kunyah Betalife Advance tumpah dari botol">
+        <img class="gaya-lebar" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/potong-tablet.webp" width="714" height="760" alt="Tablet kunyah Betalife Advance tumpah dari botol">
         <div class="tiga">
           <div class="tg"><p class="tg-n">3X</p><p class="tg-t">lebih penyerapan</p></div>
           <div class="tg"><p class="tg-n">1000</p><p class="tg-t">MG setiap tablet</p></div>
@@ -727,24 +846,24 @@ img{display:block;max-width:100%;height:auto}
           <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Tingkatkan tenaga dalaman lelaki</p></div>
         </div>
         <div class="cara">
-          <img class="cara-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/potong-ambil.webp" width="704" height="760" alt="Tangan mengambil tablet Betalife Advance dari botol">
+          <img class="cara-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/potong-ambil.webp" width="704" height="760" alt="Tangan mengambil tablet Betalife Advance dari botol">
           <p class="cara-h">Cara makan</p>
           <p class="cara-t">Telan atau kunyah 2 biji sehari, sebelum tidur. Berperisa, mudah larut, tak pahit macam kapsul.</p>
         </div>
       </div>
     </div>
     <div class="ts-grid ts-2">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-snork.webp" width="720" height="720" alt="Testimoni snork1234"><p class="ts-kap">"Bangun kencing dari 3 kali kepada 2 kali, dalam seminggu."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-dinie.webp" width="720" height="720" alt="Testimoni dinie7791"><p class="ts-kap">"Kualiti terbaik. Memang berkesan."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-snork.webp" width="720" height="720" alt="Testimoni snork1234"><p class="ts-kap">"Bangun kencing dari 3 kali kepada 2 kali, dalam seminggu."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-dinie.webp" width="720" height="720" alt="Testimoni dinie7791"><p class="ts-kap">"Kualiti terbaik. Memang berkesan."</p></div>
     </div>
   </div>
 </section>
 
-
-<section class="sek putih" id="testimoni">
+<section class="sek" id="testimoni">
   <div class="wrap">
-    <span class="tag tag-oren">Bukan cerita kami</span>
-    <h2 class="h2">Apa kata<br>pakcik-pakcik ni</h2>
+    <span class="tag">Bukan cerita kami</span>
+    <h2 class="h2">Apa kata</h2>
+    <div class="h2-sorot">pakcik-pakcik ni</div>
     <div class="stat3">
       <div class="st"><p class="st-n">4.9/5</p><p class="st-t">1.5K ulasan</p></div>
       <div class="st"><p class="st-n">29.4K+</p><p class="st-t">botol terjual</p></div>
@@ -752,12 +871,12 @@ img{display:block;max-width:100%;height:auto}
     </div>
     <p class="p">Hampir separuh daripada parcel yang kami pos setiap hari ialah <b>repeat order</b>.</p>
     <div class="ts-grid">
-      <div class="ts ts-lebar"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-shidid.webp" width="720" height="720" alt="Testimoni Mohd Shidid"><p class="ts-kap">"Derita hampir 20 tahun sudah hilang. Selepas 3 hari dah ada kesan."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-shahizan.webp" width="720" height="720" alt="Testimoni Mohamad Shahizan"><p class="ts-kap">"Dulu setiap 1 jam ulang-alik ke tandas. Sekarang dah kurang."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-kl6.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Selepas 2 hari, dah tak kerap kencing. Tidur pun lena."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-hl.webp" width="720" height="720" alt="Testimoni hl2201"><p class="ts-kap">"Kekerapan kencing berkurang, tiada lagi kencing malam."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-z8.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Jarak kencing makin lama, dari setengah jam ke 1 jam."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-u4.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Baru makan 2 biji, malam tadi tak kerap bangun ke tandas."</p></div>
+      <div class="ts ts-lebar"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-shidid.webp" width="720" height="720" alt="Testimoni Mohd Shidid"><p class="ts-kap">"Derita hampir 20 tahun sudah hilang. Selepas 3 hari dah ada kesan."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-shahizan.webp" width="720" height="720" alt="Testimoni Mohamad Shahizan"><p class="ts-kap">"Dulu setiap 1 jam ulang-alik ke tandas. Sekarang dah kurang."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-kl6.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Selepas 2 hari, dah tak kerap kencing. Tidur pun lena."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-hl.webp" width="720" height="720" alt="Testimoni hl2201"><p class="ts-kap">"Kekerapan kencing berkurang, tiada lagi kencing malam."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-z8.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Jarak kencing makin lama, dari setengah jam ke 1 jam."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-u4.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Baru makan 2 biji, malam tadi tak kerap bangun ke tandas."</p></div>
     </div>
     <div class="vid-grid">
       <div class="vid vid-p"><iframe src="https://www.youtube.com/embed/vVKyZFPvHak" title="Perkongsian pengguna Betalife Advance" allowfullscreen></iframe></div>
@@ -773,41 +892,45 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek gelap" id="galeri">
+<section class="sek alt" id="galeri">
   <div class="wrap">
-    <span class="tag tag-lime">Mereka pun amalkan</span>
-    <h2 class="h2">Lelaki macam tuan,<br>pilih Betalife</h2>
-  </div>
-  <div class="galeri-view">
-    <div class="galeri-track" role="marquee"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pakcik-topi.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-abang-bunga.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pasangan.webp" width="720" height="900" alt="Pasangan bersama Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pakcik-biru.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-abang-pink.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pakcik-topi.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-abang-bunga.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pasangan.webp" width="720" height="900" alt="Pasangan bersama Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-pakcik-biru.webp" width="720" height="900" alt="Pengguna Betalife Advance"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/model-abang-pink.webp" width="720" height="900" alt="Pengguna Betalife Advance"></div>
+    <span class="tag">Mereka pun amalkan</span>
+    <h2 class="h2">29.4K+ botol terjual,</h2>
+    <div class="h2-sorot">ramai dah pilih Betalife</div>
+    <p class="p">Dari pakcik di kampung, uncle di bandar, sampai pasangan suami isteri. Ini sebahagian yang dah amalkan Betalife Advance.</p>
+    <img class="kolaj" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/kolaj-bento.webp" width="1100" height="1372" alt="Kolaj pengguna Betalife Advance pegang produk">
+    <div class="stat3">
+      <div class="st"><p class="st-n">29.4K+</p><p class="st-t">botol terjual</p></div>
+      <div class="st"><p class="st-n">4.9/5</p><p class="st-t">1.5K ulasan</p></div>
+      <div class="st"><p class="st-n">300</p><p class="st-t">parcel dipos sehari</p></div>
+    </div>
   </div>
 </section>
 
-
-<section class="sek hijau-m" id="anak">
+<section class="sek mint" id="anak">
   <div class="wrap">
-    <span class="tag tag-oren">Untuk isteri &amp; anak-anak</span>
-    <h2 class="h2">Suami dan ayah takkan minta.<br>Tapi dia perlukan.</h2>
+    <span class="tag">Untuk isteri &amp; anak-anak</span>
+    <h2 class="h2">Suami dan ayah takkan minta.</h2>
+    <div class="h2-sorot">Tapi dia perlukan.</div>
     <p class="p">Dia takkan mengadu bangun 5 kali semalam. Dia cuma kata "biasalah". Isteri yang ikut terjaga, anak yang risau dari jauh. Ramai dah belikan Betalife untuk suami dan ayah, dan <b>beli lagi</b> bila nampak dia tidur lena.</p>
     <div class="ts-grid ts-3">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-ayah3.webp" width="720" height="720" alt="Testimoni anak beli untuk ayah"><p class="ts-kap">"Repeat order kali ketiga. Ayah dah tak kerap bangun kencing malam."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-mawar.webp" width="720" height="720" alt="Testimoni mawar_quinn"><p class="ts-kap">"Dah 3 kali order untuk ayah di kampung. Sangat membantu ayah."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-cookie.webp" width="720" height="720" alt="Testimoni cookie537733"><p class="ts-kap">"Beli untuk ayah. Lepas seminggu, ayah rasa lebih baik. Jadi repeat order."</p></div>
-      <div class="ts ts-lebar"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-ayahsuka.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Kali kedua beli, ayah saya suka."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-abah.webp" width="720" height="720" alt="Testimoni ai_laily"><p class="ts-kap">"Kali ke-3 repeat untuk abah, sesuai dengan dia."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-izwan.webp" width="720" height="720" alt="Testimoni izwan1974"><p class="ts-kap">"Abah dah habis sebotol, ada perubahan positif. Terus order 3 botol."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-ayah3.webp" width="720" height="720" alt="Testimoni anak beli untuk ayah"><p class="ts-kap">"Repeat order kali ketiga. Ayah dah tak kerap bangun kencing malam."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-mawar.webp" width="720" height="720" alt="Testimoni mawar_quinn"><p class="ts-kap">"Dah 3 kali order untuk ayah di kampung. Sangat membantu ayah."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-cookie.webp" width="720" height="720" alt="Testimoni cookie537733"><p class="ts-kap">"Beli untuk ayah. Lepas seminggu, ayah rasa lebih baik. Jadi repeat order."</p></div>
+      <div class="ts ts-lebar"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-ayahsuka.webp" width="720" height="720" alt="Testimoni pembeli"><p class="ts-kap">"Kali kedua beli, ayah saya suka."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-abah.webp" width="720" height="720" alt="Testimoni ai_laily"><p class="ts-kap">"Kali ke-3 repeat untuk abah, sesuai dengan dia."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-izwan.webp" width="720" height="720" alt="Testimoni izwan1974"><p class="ts-kap">"Abah dah habis sebotol, ada perubahan positif. Terus order 3 botol."</p></div>
     </div>
     <div class="sorot">Hadiah paling bermakna untuk suami dan ayah bukan baju raya. Tapi malam yang tidur lena sampai Subuh, untuk dia dan untuk isteri di sebelahnya.</div>
     <a class="btn" href="#harga" role="button">Belikan Untuk Suami / Ayah</a>
   </div>
 </section>
 
-
-<section class="sek putih" id="semak">
+<section class="sek" id="semak">
   <div class="wrap">
     <span class="tag">Jujur sekejap</span>
-    <h2 class="h2">Ini tuan<br>(atau ayah tuan)?</h2>
+    <h2 class="h2">Ini tuan</h2>
+    <div class="h2-sorot">(atau ayah tuan)?</div>
     <div class="semak">
       <div class="sm"><svg width="30" height="30" viewBox="0 0 34 34"><rect x="2" y="2" width="30" height="30" rx="7" fill="#fff" stroke="#1f9d46" stroke-width="3"/><path d="M9 17.5l5.5 5.5L25 11" fill="none" stroke="#1f9d46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="sm-t">Bangun kencing lebih 2 kali setiap malam</p></div>
       <div class="sm"><svg width="30" height="30" viewBox="0 0 34 34"><rect x="2" y="2" width="30" height="30" rx="7" fill="#fff" stroke="#1f9d46" stroke-width="3"/><path d="M9 17.5l5.5 5.5L25 11" fill="none" stroke="#1f9d46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="sm-t">Kencing tak lawas, kadang menitis</p></div>
@@ -816,17 +939,17 @@ img{display:block;max-width:100%;height:auto}
       <div class="sm"><svg width="30" height="30" viewBox="0 0 34 34"><rect x="2" y="2" width="30" height="30" rx="7" fill="#fff" stroke="#1f9d46" stroke-width="3"/><path d="M9 17.5l5.5 5.5L25 11" fill="none" stroke="#1f9d46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="sm-t">Nak mula ikhtiar hari ini, bukan "nanti"</p></div>
     </div>
     <div class="sorot sorot-lime">Kalau 2 pun kena, tuan dah sedia. Pilih pakej di bawah.</div>
-    <div class="ts-grid ts-2"><div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-m19.webp" width="720" height="720" alt="Testimoni pembeli pakej 2 botol"><p class="ts-kap">"Kali kedua order. Berkesan dalam 3 hari penggunaan."</p></div><div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-myblack.webp" width="720" height="720" alt="Testimoni myblack250"><p class="ts-kap">"Repeat kali kedua. Boleh rasa perubahan selepas satu botol."</p></div></div>
+    <div class="ts-grid ts-2"><div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-m19.webp" width="720" height="720" alt="Testimoni pembeli pakej 2 botol"><p class="ts-kap">"Kali kedua order. Berkesan dalam 3 hari penggunaan."</p></div><div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-myblack.webp" width="720" height="720" alt="Testimoni myblack250"><p class="ts-kap">"Repeat kali kedua. Boleh rasa perubahan selepas satu botol."</p></div></div>
   </div>
 </section>
 
-
-<section class="sek kertas" id="harga">
+<section class="sek alt" id="harga">
   <div class="wrap">
-    <span class="tag tag-merah">Promosi hari ini</span>
-    <h2 class="h2">Pilih pakej<br>ikhtiar tuan</h2>
+    <span class="tag tag-merah">Promosi 24 jam sahaja</span>
+    <h2 class="h2">Pilih pakej</h2>
+    <div class="h2-sorot">ikhtiar tuan</div>
     <div class="cd-w">
-      <p class="cd-l">Harga promosi tamat dalam:</p>
+      <p class="cd-l">Promosi 24 jam tamat dalam:</p>
       <div class="dong-ho" data-countdown data-countdown-daily="">
         <div class="o"><span data-unit="hour">00</span><i>Jam</i></div>
         <div class="o"><span data-unit="minute">00</span><i>Minit</i></div>
@@ -835,34 +958,37 @@ img{display:block;max-width:100%;height:auto}
     </div>
     <div class="pakej">
       <div class="pk">
-        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/pakej-1.webp" width="900" height="541" alt="Pakej Percubaan 1 botol Betalife Advance">
+        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/pakej-1.webp" width="900" height="541" alt="Pakej Percubaan 1 botol Betalife Advance">
         <p class="pk-n">Percubaan</p>
         <p class="pk-s">1 botol, 15 hari</p>
         <p class="pk-coret">RM139</p>
         <p class="pk-harga">RM109</p>
         <span class="pk-jimat">Jimat RM30</span>
-        <p class="pk-hadiah">Percuma: 2 sachet suplemen gerd/angin + penghantaran</p>
+        <div class="hadiah"><p class="hadiah-h">Hadiah percuma</p><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/hadiah-2.webp" width="1069" height="216" alt="Percuma 2 sachet suplemen gerd/angin"></div>
+        <p class="pk-hadiah">+ penghantaran percuma</p>
         <a class="btn" href="#borang" role="button">Pilih 1 Botol</a>
       </div>
       <div class="pk pk-top">
         <span class="pk-lencana">Paling ramai pilih</span>
-        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/pakej-3.webp" width="900" height="541" alt="Pakej Rawatan Penuh 3 botol Betalife Advance">
+        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/pakej-3.webp" width="900" height="541" alt="Pakej Rawatan Penuh 3 botol Betalife Advance">
         <p class="pk-n">Rawatan Penuh</p>
         <p class="pk-s">3 botol, 45 hari + jaminan 100% refund</p>
         <p class="pk-coret">RM417</p>
         <p class="pk-harga">RM199</p>
         <span class="pk-jimat">Jimat RM218, cuma RM66.33 sebotol</span>
-        <p class="pk-hadiah">Percuma: 5 sachet suplemen gerd/angin + 1 stokin saraf + penghantaran</p>
+        <div class="hadiah"><p class="hadiah-h">6 hadiah percuma</p><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/hadiah-6.webp" width="1069" height="216" alt="Percuma 5 sachet suplemen gerd/angin dan 1 stokin saraf"></div>
+        <p class="pk-hadiah">+ penghantaran percuma</p>
         <a class="btn" href="#borang" role="button">Pilih 3 Botol</a>
       </div>
       <div class="pk">
-        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/pakej-2.webp" width="900" height="541" alt="Pakej Combo 2 botol Betalife Advance">
-        <p class="pk-n">Combo</p>
+        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/pakej-2.webp" width="900" height="541" alt="Pakej Melegakan 2 botol Betalife Advance">
+        <p class="pk-n">Melegakan</p>
         <p class="pk-s">2 botol, 30 hari</p>
         <p class="pk-coret">RM278</p>
         <p class="pk-harga">RM179</p>
         <span class="pk-jimat">Jimat RM99</span>
-        <p class="pk-hadiah">Percuma: 2 sachet suplemen gerd/angin + penghantaran</p>
+        <div class="hadiah"><p class="hadiah-h">Hadiah percuma</p><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/hadiah-2.webp" width="1069" height="216" alt="Percuma 2 sachet suplemen gerd/angin"></div>
+        <p class="pk-hadiah">+ penghantaran percuma</p>
         <a class="btn" href="#borang" role="button">Pilih 2 Botol</a>
       </div>
     </div>
@@ -873,14 +999,13 @@ img{display:block;max-width:100%;height:auto}
     </div>
     <p class="p">90% pengguna yang beri feedback positif ambil <b>Pakej Rawatan Penuh (3 botol)</b>.</p>
     <div class="ts-grid ts-2">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-fb20.webp" width="720" height="720" alt="Komen pengguna di Facebook"><p class="ts-kap">"Dah beli, berkesan. Ambil la 3 botol, set lengkap."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-salmah.webp" width="720" height="720" alt="Testimoni salmah_amid"><p class="ts-kap">"Kali ni order 4 sekali, untuk guna lama."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-fb20.webp" width="720" height="720" alt="Komen pengguna di Facebook"><p class="ts-kap">"Dah beli, berkesan. Ambil la 3 botol, set lengkap."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-salmah.webp" width="720" height="720" alt="Testimoni salmah_amid"><p class="ts-kap">"Kali ni order 4 sekali, untuk guna lama."</p></div>
     </div>
   </div>
 </section>
 
-
-<section class="sek putih" id="jaminan">
+<section class="sek" id="jaminan">
   <div class="wrap sempit">
     <div class="jamin">
       <img src="https://w.ladicdn.com/s450x450/64d0957e7550bc001218243b/money-back-guarantee-label-2-20250316043108-wmyau.png" width="450" height="450" alt="Jaminan wang dikembalikan">
@@ -888,26 +1013,25 @@ img{display:block;max-width:100%;height:auto}
       <p class="jamin-t">Walaupun tuan hantar balik dengan <b>botol kosong</b>. Risiko atas kami, bukan atas tuan. Untuk Pakej Rawatan Penuh (3 botol), tertakluk kepada terma dan syarat.</p>
     </div>
     <div class="ts-grid ts-2">
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-ayub.webp" width="720" height="720" alt="Testimoni ayubothman"><p class="ts-kap">"Ada kesan, tahan kencing. Ini pembelian kali kedua."</p></div>
-      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2df59a23e3bb7302c3a9e6252d625d650f05cf63/flow-pakya/aset/t-nm.webp" width="720" height="720" alt="Testimoni pembeli pakej 2 botol"><p class="ts-kap">"Pakej 2 botol, ini order kali kedua."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-ayub.webp" width="720" height="720" alt="Testimoni ayubothman"><p class="ts-kap">"Ada kesan, tahan kencing. Ini pembelian kali kedua."</p></div>
+      <div class="ts"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/t-nm.webp" width="720" height="720" alt="Testimoni pembeli pakej 2 botol"><p class="ts-kap">"Pakej 2 botol, ini order kali kedua."</p></div>
     </div>
   </div>
 </section>
 
-
-<section class="sek kertas" id="langkah">
+<section class="sek mint" id="langkah">
   <div class="wrap">
     <span class="tag">Senang je</span>
-    <h2 class="h2">Apa berlaku<br>lepas tuan tempah?</h2>
+    <h2 class="h2">Apa berlaku</h2>
+    <div class="h2-sorot">lepas tuan tempah?</div>
     <div class="lgk">
       <div class="lk"><div class="lk-n">1</div><div><p class="lk-h">Isi borang</p><p class="lk-t">Nama, telefon dan alamat. Pilih pakej.</p></div></div>
       <div class="lk"><div class="lk-n">2</div><div><p class="lk-h">Kami proses</p><p class="lk-t">Tempahan diproses secepat mungkin. Pos setiap hari.</p></div></div>
-      <div class="lk"><div class="lk-n">3</div><div><p class="lk-h">DHL hubungi tuan</p><p class="lk-t">Rider hubungi untuk penghantaran.</p></div></div>
+      <div class="lk"><div class="lk-n">3</div><div><p class="lk-h">Kurier hubungi tuan</p><p class="lk-t">Rider hubungi untuk penghantaran.</p></div></div>
       <div class="lk"><div class="lk-n">4</div><div><p class="lk-h">Bayar bila sampai</p><p class="lk-t">COD. Terima barang dulu, baru bayar.</p></div></div>
     </div>
   </div>
 </section>
-
 
 <section class="borang" id="borang">
   <div class="wrap">
@@ -917,8 +1041,7 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek putih" id="surat">
+<section class="sek" id="surat">
   <div class="wrap sempit">
     <span class="tag">Sepatah dua kata</span>
     <h2 class="h2">Dari kami di Totalmen</h2>
@@ -933,11 +1056,11 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek kertas" id="faq">
+<section class="sek mint" id="faq">
   <div class="wrap sempit">
     <span class="tag">Soalan lazim</span>
-    <h2 class="h2">Tuan mungkin<br>tertanya-tanya</h2>
+    <h2 class="h2">Tuan mungkin</h2>
+    <div class="h2-sorot">tertanya-tanya</div>
     <div class="faq">
       <details><summary>Betul ke lulus KKM dan halal?</summary><p class="faq-j">Ya. Betalife Advance berdaftar dengan KKM di bawah Akta Makanan sebagai makanan tambahan harian (No. permohonan label FLS1024180-0), berstatus Halal dan dikilangkan di kilang bersijil GMP.</p></details>
       <details><summary>1 botol ada berapa biji?</summary><p class="faq-j">30 tablet, cukup untuk 15 hari pada 2 biji sehari.</p></details>
@@ -952,11 +1075,11 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-
-<section class="sek putih" id="pilihan">
+<section class="sek" id="pilihan">
   <div class="wrap">
-    <span class="tag tag-oren">Cuba bayangkan sekejap</span>
-    <h2 class="h2">7 hari dari sekarang,<br>tuan yang mana?</h2>
+    <span class="tag">Cuba bayangkan sekejap</span>
+    <h2 class="h2">7 hari dari sekarang,</h2>
+    <div class="h2-sorot">tuan yang mana?</div>
     <div class="ab">
       <div class="ab-k ab-a">
         <p class="ab-h">Versi A: tunggu dulu</p>
@@ -967,10 +1090,19 @@ img{display:block;max-width:100%;height:auto}
       </div>
       <div class="ab-k ab-b">
         <p class="ab-h">Versi B: mula hari ini</p>
+        <img class="jln-img" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@3aec7d47e1e2c5a4e0be514d0f7bcd5a4cf3c838/flow-pakya/aset/babak-pagi.webp" width="720" height="900" alt="Gambar hiasan: pakcik bangun pagi dengan segar">
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Bangun ke tandas makin berkurang</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Kencing makin lancar dan lawas</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Tidur lena, bangun Subuh dengan segar</p></div>
         <div class="baris"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f9d46"/><path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="baris-t">Anak-anak lega tengok ayah sihat</p></div>
+      </div>
+    </div>
+    <div class="cd-w">
+      <p class="cd-l">Promosi 24 jam tamat dalam:</p>
+      <div class="dong-ho" data-countdown data-countdown-daily="">
+        <div class="o"><span data-unit="hour">00</span><i>Jam</i></div>
+        <div class="o"><span data-unit="minute">00</span><i>Minit</i></div>
+        <div class="o"><span data-unit="second">00</span><i>Saat</i></div>
       </div>
     </div>
     <div class="sorot">Bezanya cuma satu keputusan kecil. Yang tuan buat hari ini.</div>
@@ -980,7 +1112,6 @@ img{display:block;max-width:100%;height:auto}
     <p class="ps"><b>P.P.S.</b> Harga promosi sah sehingga 11:59 malam ini sahaja. Esok mungkin harga dah berubah.</p>
   </div>
 </section>
-
 
 <section class="nafi" id="penafian">
   <div class="wrap">
