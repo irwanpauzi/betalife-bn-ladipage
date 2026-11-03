@@ -58,7 +58,7 @@
       for(var k in kad){kad[k].classList.toggle('btl-on',k===n);}
       if(R.pakej)R.pakej.textContent=p.nama; if(R.asal)R.asal.textContent=f(p.asal);
       if(R.disk)R.disk.textContent='- '+f(p.diskaun); if(R.disk)R.disk.textContent='- '+f(p.diskaun+kup); if(R.tot)R.tot.textContent=f(p.asal-p.diskaun-kup);
-      if(R.inc)R.inc.textContent='Termasuk: '+p.inc;
+      if(R.inc){R.inc.textContent='Termasuk: '+p.inc+(kup?'  \u2713 Kupon SGD 5 berjaya digunakan':'');if(kup){R.inc.style.color='#047857';R.inc.style.fontWeight='700';}}
       if(inp){inp.value=p.nilai+(kup?' + Kupon SGD 5 (bayar SGD '+(p.asal-p.diskaun-kup)+')':'');inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));}
     }
     /* klik di mana-mana dalam kawasan kad (kotak, gambar, teks) */
