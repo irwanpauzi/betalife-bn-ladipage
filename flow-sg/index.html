@@ -1455,7 +1455,7 @@ img{display:block;max-width:100%;height:auto}
 document.querySelectorAll('[data-slide]').forEach(function (b) { b.onclick = function () {
   var t = document.getElementById(b.getAttribute('aria-controls')), w = t.firstElementChild.getBoundingClientRect().width + 12;
   t.scrollBy({left: (b.dataset.slide === 'next' ? 1 : -1) * w * 2, behavior: 'smooth'}); }; });
-document.querySelectorAll('.sl-track').forEach(function (t) { setInterval(function () {
+document.querySelectorAll('.sl-track').forEach(function (t) { if (t.id === 'sl-2') return; setInterval(function () {
   var w = t.firstElementChild.getBoundingClientRect().width + 12;
   if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 4) t.scrollTo({left: 0, behavior: 'smooth'}); else t.scrollBy({left: w, behavior: 'smooth'}); }, 4000); });
 document.querySelectorAll('[data-countdown]').forEach(function (c) {

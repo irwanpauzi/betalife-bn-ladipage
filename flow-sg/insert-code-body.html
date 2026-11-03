@@ -149,33 +149,41 @@
 </script>
 
 <script>
-/* ===== SLIDER VIDEO TESTIMONI: tekan thumbnail -> video main dalam popup atas page (tak keluar ke YouTube) ===== */
+/* ===== SLIDER VIDEO TESTIMONI: tekan thumbnail -> video main TERUS dalam kad (saiz sama). Swipe tidak memainkan video ===== */
 (function(){
   var V={"vt-sg3":"zp37WRwfPgk","vt-7":"eVyVKpzMtXk","vt-2":"OOVw9COjktM","vt-6":"rARd1D7tXro"};
-  var st=document.createElement('style');
-  st.textContent='.btlv{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.86)}'+
-    '.btlv-k{position:relative;width:100%;max-width:420px}.btlv iframe{display:block;width:100%;aspect-ratio:9/16;max-height:80vh;border:0;border-radius:14px;background:#000}'+
-    '.btlv-x{position:absolute;top:-52px;right:0;width:44px;height:44px;border:0;border-radius:50%;background:#fff;font:700 24px/44px Quicksand,sans-serif;color:#10231a;cursor:pointer}';
-  document.head.appendChild(st);
   function cari(el){
-    for(var i=0;i<4&&el;i++,el=el.parentElement){
+    for(var i=0;i<5&&el;i++,el=el.parentElement){
       var list=[el].concat([].slice.call(el.querySelectorAll?el.querySelectorAll('*'):[]).slice(0,12));
-      for(var j=0;j<list.length;j++){var bg=getComputedStyle(list[j]).backgroundImage||'';var src=list[j].currentSrc||list[j].src||'';var t=bg+' '+src;
-        for(var k in V){if(new RegExp('/'+k+'[^/]*\\.(webp|png|jpe?g)','i').test(t))return V[k];}}
+      for(var j=0;j<list.length;j++){var t=(getComputedStyle(list[j]).backgroundImage||'')+' '+(list[j].currentSrc||list[j].src||'');
+        for(var k in V){if(new RegExp('/'+k+'[^/]*\\.(webp|png|jpe?g)','i').test(t))return {id:V[k],el:list[j].closest('.ladi-element')||list[j]};}}
       if(el.classList&&el.classList.contains('ladi-carousel'))break;
     }
     return null;
   }
-  function main(id){
-    var w=document.createElement('div');w.className='btlv';
-    w.innerHTML='<div class="btlv-k"><button class="btlv-x" aria-label="Tutup">×</button><iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&playsinline=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';
-    w.addEventListener('click',function(e){if(e.target===w||e.target.classList.contains('btlv-x'))w.parentNode.removeChild(w);});
-    document.body.appendChild(w);
+  function henti(){document.querySelectorAll('.btlv-in').forEach(function(f){f.parentNode.removeChild(f);});}
+  function main(r){
+    henti();
+    var f=document.createElement('iframe');f.className='btlv-in';
+    f.src='https://www.youtube.com/embed/'+r.id+'?autoplay=1&playsinline=1&rel=0';
+    f.setAttribute('allow','autoplay; encrypted-media; fullscreen');f.setAttribute('allowfullscreen','');
+    f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px;background:#000;z-index:5';
+    r.el.appendChild(f);
   }
+  /* bezakan TEKAN dengan SWIPE */
+  var x0=0,y0=0,t0=0,gerak=99;
+  function mula(x,y){x0=x;y0=y;t0=Date.now();gerak=0;}
+  function alih(x,y){gerak=Math.max(gerak,Math.abs(x-x0),Math.abs(y-y0));if(gerak>25&&Math.abs(x-x0)>Math.abs(y-y0))henti();}
+  document.addEventListener('touchstart',function(e){var t=e.touches[0];mula(t.clientX,t.clientY);},{passive:true,capture:true});
+  document.addEventListener('touchmove',function(e){var t=e.touches[0];if(e.target.closest&&e.target.closest('.ladi-carousel'))alih(t.clientX,t.clientY);},{passive:true,capture:true});
+  document.addEventListener('mousedown',function(e){mula(e.clientX,e.clientY);},true);
+  document.addEventListener('mousemove',function(e){if(e.buttons&&e.target.closest&&e.target.closest('.ladi-carousel'))alih(e.clientX,e.clientY);},true);
   document.addEventListener('click',function(ev){
-    if(!ev.target.closest||!ev.target.closest('.ladi-carousel'))return;
-    var id=cari(ev.target); if(!id)return;
-    ev.preventDefault();ev.stopPropagation();main(id);
+    if(!ev.target.closest||!ev.target.closest('.ladi-carousel')||ev.target.closest('.btlv-in'))return;
+    var r=cari(ev.target); if(!r)return;
+    ev.preventDefault();ev.stopPropagation();
+    if(gerak>10||Date.now()-t0>600)return; /* swipe, bukan tekan */
+    main(r);
   },true);
 })();
 </script>
