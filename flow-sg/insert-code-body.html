@@ -126,13 +126,13 @@
       '<p class="btlp-p">Tekan butang di bawah. Potongan terus dikira dalam ringkasan pesanan.</p>'+
       '<button class="btlp-b btlp-or" data-kup>Tuntut SGD 5 &amp; tempah</button><button class="btlp-b btlp-l">Tak apa, terima kasih</button>');
     w.querySelector('[data-kup]').addEventListener('click',function(){window.BTL_KUPON=1;if(window.BTL_PILIH)window.BTL_PILIH(window.BTL_PAKEJ||'3');keBorang(w);});return true;}
-  /* diam */
-  var tm; function reset(){clearTimeout(tm);tm=setTimeout(function(){ss('btl_p1')?p2():p1();},IDLE);}
+  /* diam atau scroll laju ke atas -> popup 1 sahaja. Popup 2 hanya bila betul-betul nak keluar (back / tetikus ke tab) */
+  var tm; function reset(){clearTimeout(tm);tm=setTimeout(function(){p1();},IDLE);}
   ['scroll','touchstart','mousemove','keydown','click'].forEach(function(ev){window.addEventListener(ev,reset,{passive:true});});reset();
   /* nak keluar: desktop = tetikus ke atas; mobile = scroll laju ke atas */
   document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<10){ss('btl_p1')?p2():p1();}});
   var ly=window.pageYOffset,lt=Date.now();
-  window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500){ss('btl_p1')?p2():p1();}ly=y;lt=t;},{passive:true});
+  window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500){p1();}ly=y;lt=t;},{passive:true});
   /* butang BACK (mobile & desktop): tunjuk popup dulu, back sekali lagi baru keluar */
   var jebak=false;
   function pasang(){if(jebak||ss('btl_p2'))return;jebak=true;try{history.pushState({btl:1},'',location.href);}catch(e){}}
