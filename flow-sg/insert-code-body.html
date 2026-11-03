@@ -144,3 +144,35 @@
     if(!ss('btl_p2'))pasang();});
 })();
 </script>
+
+<script>
+/* ===== SLIDER VIDEO TESTIMONI: tekan thumbnail -> video main dalam popup atas page (tak keluar ke YouTube) ===== */
+(function(){
+  var V={"vt-sg3":"zp37WRwfPgk","vt-7":"eVyVKpzMtXk","vt-2":"OOVw9COjktM","vt-6":"rARd1D7tXro"};
+  var st=document.createElement('style');
+  st.textContent='.btlv{position:fixed;inset:0;z-index:2147483001;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.86)}'+
+    '.btlv-k{position:relative;width:100%;max-width:420px}.btlv iframe{display:block;width:100%;aspect-ratio:9/16;max-height:80vh;border:0;border-radius:14px;background:#000}'+
+    '.btlv-x{position:absolute;top:-52px;right:0;width:44px;height:44px;border:0;border-radius:50%;background:#fff;font:700 24px/44px Quicksand,sans-serif;color:#10231a;cursor:pointer}';
+  document.head.appendChild(st);
+  function cari(el){
+    for(var i=0;i<4&&el;i++,el=el.parentElement){
+      var list=[el].concat([].slice.call(el.querySelectorAll?el.querySelectorAll('*'):[]).slice(0,12));
+      for(var j=0;j<list.length;j++){var bg=getComputedStyle(list[j]).backgroundImage||'';var src=list[j].currentSrc||list[j].src||'';var t=bg+' '+src;
+        for(var k in V){if(new RegExp('/'+k+'[^/]*\\.(webp|png|jpe?g)','i').test(t))return V[k];}}
+      if(el.classList&&el.classList.contains('ladi-carousel'))break;
+    }
+    return null;
+  }
+  function main(id){
+    var w=document.createElement('div');w.className='btlv';
+    w.innerHTML='<div class="btlv-k"><button class="btlv-x" aria-label="Tutup">×</button><iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&playsinline=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';
+    w.addEventListener('click',function(e){if(e.target===w||e.target.classList.contains('btlv-x'))w.parentNode.removeChild(w);});
+    document.body.appendChild(w);
+  }
+  document.addEventListener('click',function(ev){
+    if(!ev.target.closest||!ev.target.closest('.ladi-carousel'))return;
+    var id=cari(ev.target); if(!id)return;
+    ev.preventDefault();ev.stopPropagation();main(id);
+  },true);
+})();
+</script>
