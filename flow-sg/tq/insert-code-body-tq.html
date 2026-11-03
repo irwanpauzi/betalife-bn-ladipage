@@ -1,0 +1,82 @@
+<!-- Betalife Flow Singapore: PAGE TQ (https://sgd.betalifeenterprise.com/tqpage). Tampal di Settings > Insert Code > Body page TQ.
+     JANGAN masukkan pixel yang sama di Settings > Facebook Pixel LadiPage, nanti event dikira 2 kali. -->
+<script>
+/* ===== 1. META PIXEL 592679300003992: PageView + Purchase + CompletePayment (sekali setiap tempahan) ===== */
+(function(){
+  var PIXEL='592679300003992', WA='6593417530';
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+  function kuki(k){var m=document.cookie.match(new RegExp('(?:^|; )'+k+'=([^;]*)'));return m?decodeURIComponent(m[1]):null;}
+  var o=null; try{o=JSON.parse(ls('btl_order')||kuki('btl_order')||'null');}catch(e){}
+  /* data dari URL (kalau ada) mengatasi */
+  var q=new URLSearchParams(location.search);
+  if(q.get('value')){o=o||{};o.value=parseFloat(q.get('value'));if(q.get('currency'))o.currency=q.get('currency');}
+
+  /* kesan currency: pesanan -> domain -> zon waktu -> MYR */
+  function matawang(){
+    if(o&&o.currency)return o.currency;
+    var h=location.hostname;
+    if(/(^|\.)sgd\.|singapore|\.sg$/i.test(h))return 'SGD';
+    if(/\.bn$|brunei|bnd\./i.test(h))return 'BND';
+    try{var z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';if(z==='Asia/Singapore')return 'SGD';if(z==='Asia/Brunei')return 'BND';}catch(e){}
+    return 'MYR';
+  }
+  var CUR=matawang();
+  var baru=o&&o.t&&(Date.now()-o.t<6*3600*1000);
+  var dariPage=/sgd\.betalifeenterprise\.com/i.test(document.referrer)&&!/tqpage/i.test(document.referrer);
+  var id=(o&&o.id)||('SG'+Date.now().toString(36));
+  var nilai=(o&&o.value)||139;
+
+  fbq('init',PIXEL);
+  fbq('track','PageView');
+  /* hanya bila betul-betul datang dari borang (elak refresh / buka terus dikira jualan) */
+  if((baru||dariPage)&&!ls('btl_px_'+id)){
+    var d={value:nilai,currency:CUR,content_name:'Betalife Advance',content_ids:['betalife-advance'],content_type:'product',num_items:(o&&o.botol)||3,order_id:id};
+    fbq('track','Purchase',d,{eventID:'purchase_'+id});
+    fbq('trackCustom','CompletePayment',d,{eventID:'complete_'+id});
+    ls('btl_px_'+id,'1');
+  }
+  window.BTL_TQ={o:o,cur:CUR,id:id,nilai:nilai,wa:WA};
+})();
+</script>
+
+<script>
+/* ===== 2. ISI RINGKASAN + POPUP WHATSAPP AUTOMATIK KE ADMIN ===== */
+(function(){
+  var T=window.BTL_TQ||{}, o=T.o||{}, CUR=T.cur||'SGD';
+  function f(n){return CUR+' '+Number(n).toFixed(2);}
+  function ganti(lama,baru){if(!baru)return;[].slice.call(document.querySelectorAll('.ladi-paragraph,.ladi-headline,p')).forEach(function(e){if(e.textContent.trim()===lama)e.textContent=baru;});}
+  function isi(){
+    ganti('Tuan / Puan',o.nama); ganti('Seperti diisi',o.tel); ganti('3 Botol (Rawatan Penuh)',o.pakej);
+    ganti('Alamat seperti diisi',o.alamat?(o.alamat+(o.poskod?', Singapore '+o.poskod:'')):''); ganti('SGD 139.00',f(T.nilai));
+  }
+  var mesej='Salam consultant, saya nak SAHKAN tempahan Betalife Advance (Singapura).\n\n'+
+    'No. tempahan: '+T.id+'\nNama: '+(o.nama||'-')+'\nTelefon: '+(o.tel||'-')+'\nPakej: '+(o.pakej||'-')+
+    '\nJumlah: '+f(T.nilai)+' (COD, bayar bila sampai)\nAlamat: '+(o.alamat||'-')+(o.poskod?', Singapore '+o.poskod:'')+'\n\nTerima kasih.';
+  var URL='https://wa.me/'+(T.wa||'6593417530')+'?text='+encodeURIComponent(mesej);
+  /* butang WhatsApp dalam page -> mesej penuh */
+  document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.ladi-button');if(b&&/WhatsApp/i.test(b.textContent)){ev.preventDefault();ev.stopPropagation();location.href=URL;}},true);
+
+  var css='.btlw{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(5,20,12,.75);font-family:Quicksand,sans-serif}'+
+    '.btlw-k{width:100%;max-width:400px;padding:22px 18px 16px;border-radius:22px;background:#fffdf7;border-top:7px solid #25d366;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}'+
+    '.btlw-h{margin:0;font:700 24px/1.25 Quicksand,sans-serif;color:#0b3a24}.btlw-p{margin:10px 0 0;font:500 17px/1.45 Quicksand,sans-serif;color:#2c4235}'+
+    '.btlw-n{display:inline-block;width:64px;height:64px;margin:14px 0 0;border-radius:50%;background:#25d366;font:700 30px/64px Quicksand,sans-serif;color:#fff}'+
+    '.btlw-b{display:block;margin:14px 0 0;padding:16px 12px;border-radius:99px;background:#25d366;font:700 19px/1.2 Quicksand,sans-serif;color:#fff;text-decoration:none}'+
+    '.btlw-l{display:block;width:100%;margin:8px 0 0;padding:10px;border:0;background:none;font:600 15px/1.2 Quicksand,sans-serif;color:#557061;cursor:pointer}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  function popup(){
+    if(sessionStorage.getItem('btl_wa_'+T.id))return; try{sessionStorage.setItem('btl_wa_'+T.id,'1');}catch(e){}
+    var w=document.createElement('div');w.className='btlw';
+    w.innerHTML='<div class="btlw-k"><p class="btlw-h">Sahkan pesanan tuan</p><p class="btlw-p">Kami bawa tuan ke WhatsApp consultant kami. Mesej pesanan dah siap, cuma tekan <b>Hantar</b>.</p>'+
+      '<span class="btlw-n">5</span><a class="btlw-b" href="'+URL+'">Buka WhatsApp sekarang</a><button class="btlw-l">Nanti dulu</button></div>';
+    document.body.appendChild(w);
+    var n=5,el=w.querySelector('.btlw-n'),tm=setInterval(function(){n--;el.textContent=n;if(n<=0){clearInterval(tm);location.href=URL;}},1000);
+    w.querySelector('.btlw-l').addEventListener('click',function(){clearInterval(tm);w.parentNode.removeChild(w);});
+  }
+  isi(); window.addEventListener('load',isi); setTimeout(isi,1200);
+  setTimeout(popup,1500); /* beri masa pixel dihantar dulu */
+})();
+</script>

@@ -180,9 +180,9 @@
   document.addEventListener('mousemove',function(e){if(e.buttons&&e.target.closest&&e.target.closest('.ladi-carousel'))alih(e.clientX,e.clientY);},true);
   document.addEventListener('click',function(ev){
     if(!ev.target.closest||!ev.target.closest('.ladi-carousel')||ev.target.closest('.btlv-in'))return;
+    if(gerak>10||Date.now()-t0>600)return; /* swipe: biar slider LadiPage urus, jangan sekat */
     var r=cari(ev.target); if(!r)return;
     ev.preventDefault();ev.stopPropagation();
-    if(gerak>10||Date.now()-t0>600)return; /* swipe, bukan tekan */
     main(r);
   },true);
 })();
@@ -212,5 +212,52 @@
     });
   }
   mula(); window.addEventListener('load',mula); setTimeout(mula,1500);
+})();
+</script>
+
+<script>
+/* ===== META PIXEL 592679300003992 (page utama): PageView, ViewContent, AddToCart (pilih pakej), InitiateCheckout (mula isi borang)
+   + simpan data tempahan bila borang dihantar -> dibaca page TQ (/tqpage) untuk Purchase & CompletePayment.
+   JANGAN masukkan pixel yang sama di Settings > Facebook Pixel LadiPage, nanti event dikira 2 kali. ===== */
+(function(){
+  var PIXEL='592679300003992', CUR='SGD';
+  var HARGA={"3":{v:139,n:"3 Botol (Rawatan Penuh)"},"2":{v:119,n:"2 Botol (Melegakan)"},"1":{v:69,n:"1 Botol (Percubaan)"}};
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init',PIXEL); fbq('track','PageView');
+  function data(){var p=window.BTL_PAKEJ||'3',h=HARGA[p],kup=window.BTL_KUPON?5:0;return {p:p,v:h.v-kup,n:h.n};}
+  var c0=data();
+  fbq('track','ViewContent',{content_name:'Betalife Advance',content_ids:['betalife-advance'],content_type:'product',value:c0.v,currency:CUR});
+  /* AddToCart: bila pelawat sendiri pilih pakej (kad borang / butang Pilih N Botol) */
+  var dahATC={};
+  document.addEventListener('click',function(ev){
+    var t=ev.target; if(!t.closest)return;
+    var pilihBtn=t.closest('.ladi-button')&&/Pilih\s*[123]\s*Botol/i.test(t.closest('.ladi-button').textContent);
+    var dalamKad=t.closest('.btl-kad');
+    if(!pilihBtn&&!dalamKad)return;
+    setTimeout(function(){var d=data();if(dahATC[d.p])return;dahATC[d.p]=1;
+      fbq('track','AddToCart',{content_name:d.n,content_ids:['betalife-advance-'+d.p],content_type:'product',value:d.v,currency:CUR});},150);
+  },true);
+  /* InitiateCheckout: kali pertama mula isi borang */
+  var dahIC=false;
+  document.addEventListener('focusin',function(ev){
+    if(dahIC||!ev.target.closest||!ev.target.closest('form'))return; var n=ev.target.name;
+    if(['name','phone','address','zipcode'].indexOf(n)<0)return; dahIC=true; var d=data();
+    fbq('track','InitiateCheckout',{content_name:d.n,content_ids:['betalife-advance-'+d.p],content_type:'product',num_items:+d.p,value:d.v,currency:CUR});
+  },true);
+  /* simpan tempahan bila tekan butang hantar borang (dibaca oleh page TQ) */
+  function simpan(){
+    var f=document.querySelector('input[name="name"]'); f=f&&f.closest('form'); if(!f)return;
+    function v(n){var i=f.querySelector('[name="'+n+'"]');return i?i.value.trim():'';}
+    if(!v('name')||!v('phone'))return;
+    var d=data(), o={id:'SG'+Date.now().toString(36).toUpperCase(),t:Date.now(),value:d.v,currency:CUR,botol:+d.p,pakej:d.n+(window.BTL_KUPON?' + kupon SGD 5':''),
+      nama:v('name'),tel:v('phone'),alamat:v('address'),poskod:v('zipcode')};
+    var s=JSON.stringify(o);
+    try{localStorage.setItem('btl_order',s);}catch(e){}
+    document.cookie='btl_order='+encodeURIComponent(s)+';path=/;max-age=21600';
+  }
+  document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.ladi-button');if(b&&b.closest('form')&&/Tempah Sekarang/i.test(b.textContent))simpan();},true);
+  document.addEventListener('submit',simpan,true);
 })();
 </script>
