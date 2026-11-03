@@ -132,8 +132,10 @@
   ['scroll','touchstart','mousemove','keydown','click'].forEach(function(ev){window.addEventListener(ev,reset,{passive:true});});reset();
   /* nak keluar: desktop = tetikus ke atas; mobile = scroll laju ke atas */
   document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<10){ss('btl_p1')?p2():p1();}});
+  /* skrol akibat tekan butang/menu (cth. 'Utama') tidak dikira sebagai nak keluar */
+  var klikAkhir=0; window.addEventListener('click',function(){klikAkhir=Date.now();},true); window.addEventListener('touchstart',function(){klikAkhir=Date.now();},{passive:true,capture:true});
   var ly=window.pageYOffset,lt=Date.now();
-  window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500){p1();}ly=y;lt=t;},{passive:true});
+  window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500&&t-klikAkhir>2500){p1();}ly=y;lt=t;},{passive:true});
   /* butang BACK (mobile & desktop): tunjuk popup dulu, back sekali lagi baru keluar */
   var jebak=false;
   function pasang(){if(jebak||ss('btl_p2')||(!P2_HIDUP&&ss('btl_p1')))return;jebak=true;try{history.pushState({btl:1},'',location.href);}catch(e){}}
@@ -179,7 +181,7 @@
 </script>
 
 <script>
-/* ===== BAR BAWAH (mobile): melekat di bawah skrin + seluruh petak (ikon & tulisan) boleh ditekan ===== */
+/* ===== BAR BAWAH: seluruh petak (ikon & tulisan) boleh ditekan. Bar TIDAK melekat (kekal di hujung page, ikut pilihan tuan) ===== */
 (function(){
   var NAMA=['Utama','Pakar','Tempah','Ulasan','FAQ'];
   function mula(){
@@ -191,7 +193,8 @@
         sec.style.cssText+=';position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;z-index:2147482000!important;box-shadow:0 -6px 18px -8px rgba(0,0,0,.25)';
         document.body.style.paddingBottom=h+'px';}
     }
-    lekat();
+    var LEKAT=false; /* tukar ke true kalau nak bar melekat di bawah skrin mobile */
+    if(LEKAT)lekat();
     sec.style.cursor='pointer';
     sec.addEventListener('click',function(ev){
       if(ev.target.closest('.ladi-button'))return;
