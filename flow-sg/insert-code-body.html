@@ -38,10 +38,9 @@
     var tajuk=semua(document).filter(function(e){return e.textContent.trim()==='Ringkasan pesanan';})[0];
     if(!tajuk) return;
     var sec=tajuk.closest('.ladi-section'); if(!sec||sec.dataset.btl) return; sec.dataset.btl=1;
-    var R={pakej:el(sec,'3 Botol (Rawatan Penuh)'),asal:el(sec,'SGD 327.00'),disk:el(sec,'- SGD 188.00'),tot:el(sec,'SGD 139.00'),inc:el(sec,'Termasuk: 3 botol (45 hari) + jaminan 100% refund')};
+    var R={pakej:el(sec,'3 Botol (Rawatan Penuh)'),asal:el(sec,'SGD 327.00'),disk:el(sec,'- SGD 188.00'),tot:el(sec,'SGD 139.00'),inc:semua(sec).filter(function(e){return e.textContent.replace(/\s+/g,' ').trim().indexOf('Termasuk:')===0;})[0]||null};
     var inp=sec.querySelector('input[name="pakej"]');
-    if(inp){var it=inp.closest('.ladi-element');if(it)it.style.display='none';
-      semua(sec).forEach(function(e){if(e.textContent.trim()==='Pakej pilihan *'){var x=e.closest('.ladi-element');if(x)x.style.display='none';}});}
+    if(inp){inp.readOnly=true;inp.style.fontWeight='700';inp.style.color='#0b3a24';inp.style.background='#eaf6e4';}
     var kad={};
     ['3','2','1'].forEach(function(n){
       var t=el(sec,n+' Botol'); if(!t) return;
@@ -68,6 +67,11 @@
     },true);
     for(var n in kad){var k=kad[n];k.classList.add('btl-kad');k.style.overflow='visible';var t=document.createElement('span');t.className='btl-tick';t.textContent='✓';k.appendChild(t);}
     pilih('3');
+    /* butang 'Pilih N Botol' di bahagian harga -> pilih kad sama dalam borang */
+    document.addEventListener('click',function(ev){
+      var b=ev.target.closest&&ev.target.closest('.ladi-button'); if(!b) return;
+      var m=b.textContent.match(/Pilih\s*([123])\s*Botol/i); if(m) setTimeout(function(){pilih(m[1]);},50);
+    },true);
     var tel=sec.querySelector('input[name="phone"]');
     if(tel){tel.addEventListener('blur',function(){var d=tel.value.replace(/\D/g,'');if(d.indexOf('65')===0&&d.length===10)d=d.slice(2);if(d.length===8)tel.value='+65'+d;});}
     var pos=sec.querySelector('input[name="zipcode"]');
