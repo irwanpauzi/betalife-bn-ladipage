@@ -781,6 +781,25 @@ img{display:block;max-width:100%;height:auto}
 .sl-track .mqv img{width:224px;height:299px}
 @media (min-width:900px){.sl{max-width:1000px;margin:14px auto 0}}
 
+
+.sl-track .mq,.sl-track .mqv,.sl-track .dok{flex:0 0 100%;width:100%;box-sizing:border-box;scroll-snap-align:start}
+.sl-track .mq img{width:100%;height:auto;aspect-ratio:600/520}
+.sl-track .mqv img{width:100%;height:auto;aspect-ratio:720/960}
+.sl-track .dok{animation:none;transition:none}
+.sl-track .dok:hover{transform:none}
+.sl-track .dok img{height:460px;object-fit:cover;object-position:top}
+.sl-track .dok-t{height:72px}
+@media (min-width:900px){
+  .sl-track .mq{flex:0 0 310px;width:310px}
+  .sl-track .mq img{width:294px;height:255px}
+  .sl-track .mqv{flex:0 0 300px;width:300px}
+  .sl-track .mqv img{width:284px;height:379px}
+  .sl-track .dok{flex:0 0 360px;width:360px}
+  .sl-track .dok img{height:430px}
+}
+.bo-ik{display:flex;justify-content:center;height:34px}
+.bo-rv{margin-top:6px}
+
 </style>
 </head>
 <body>
@@ -1104,10 +1123,9 @@ img{display:block;max-width:100%;height:auto}
     <h2 class="h2">KKM Malaysia, Halal</h2>
     <div class="h2-sorot">&amp; ujian makmal</div>
     <p class="p">Bukan sekadar cakap. Ini dokumen sebenar Betalife Advance, supaya tuan dan keluarga di Singapura yakin sebelum amalkan. Kelulusan ini daripada pihak berkuasa Malaysia, bukan HSA Singapura.</p>
-    <div class="dok-grid">
-      <div class="dok"><img src="https://w.ladicdn.com/s750x900/64d0957e7550bc001218243b/kkm-betalife-sensor-20260705064358-cgaf8.jpg" width="750" height="1078" alt="Surat kelulusan label KKM Betalife Advance"><span class="dok-pil">KKM</span><p class="dok-h">Kelulusan label KKM</p><p class="dok-t">Berdaftar di bawah Akta Makanan sebagai makanan tambahan harian. No. permohonan FLS1024180-0.</p></div>
-      <div class="dok"><img src="https://w.ladicdn.com/s700x850/64d0957e7550bc001218243b/sijil-halal-betalife-20260705065826-cdpt0.jpg" width="700" height="983" alt="Sijil Pengesahan Halal Betalife Advance"><span class="dok-pil">HALAL</span><p class="dok-h">Sijil Pengesahan Halal</p><p class="dok-t">Tablet kunyahan Tongkat Ali, Delima dan Saw Palmetto. Piawaian MS 1500:2019.</p></div>
-      <div class="dok"><img src="https://w.ladicdn.com/s700x900/64d0957e7550bc001218243b/lab-test-totalmen-20260705065737-6dye_.jpg" width="700" height="1001" alt="Certificate of Analysis Betalife Advance"><span class="dok-pil">LAB</span><p class="dok-h">Ujian makmal (COA)</p><p class="dok-t">Halvec Laboratories Sdn Bhd. Cert No. 2024/J0315/S001/CC0690, SAMM 770.</p></div>
+    <p class="sl-hint">Leret ke kiri untuk lagi &#8594;</p>
+    <div class="sl" aria-roledescription="carousel">
+      <div id="sl-dok" class="sl-track"><div class="dok" aria-roledescription="slide"><img src="https://w.ladicdn.com/s750x900/64d0957e7550bc001218243b/kkm-betalife-sensor-20260705064358-cgaf8.jpg" width="750" height="1078" alt="Surat kelulusan label KKM Betalife Advance"><span class="dok-pil">KKM</span><p class="dok-h">Kelulusan label KKM</p><p class="dok-t">Berdaftar di bawah Akta Makanan sebagai makanan tambahan harian. No. permohonan FLS1024180-0.</p></div><div class="dok" aria-roledescription="slide"><img src="https://w.ladicdn.com/s700x850/64d0957e7550bc001218243b/sijil-halal-betalife-20260705065826-cdpt0.jpg" width="700" height="983" alt="Sijil Pengesahan Halal Betalife Advance"><span class="dok-pil">HALAL</span><p class="dok-h">Sijil Pengesahan Halal</p><p class="dok-t">Tablet kunyahan Tongkat Ali, Delima dan Saw Palmetto. Piawaian MS 1500:2019.</p></div><div class="dok" aria-roledescription="slide"><img src="https://w.ladicdn.com/s700x900/64d0957e7550bc001218243b/lab-test-totalmen-20260705065737-6dye_.jpg" width="700" height="1001" alt="Certificate of Analysis Betalife Advance"><span class="dok-pil">LAB</span><p class="dok-h">Ujian makmal (COA)</p><p class="dok-t">Halvec Laboratories Sdn Bhd. Cert No. 2024/J0315/S001/CC0690, SAMM 770.</p></div></div>
     </div>
     <div class="kilang">
       <img class="kilang-foto" src="https://w.ladicdn.com/s800x800/64d0957e7550bc001218243b/067e38f2-2493-4122-bec4-cbc6b96dafc8-1-20260107081023-qecnr.jpg" width="800" height="800" alt="Pekerja kilang mengemas Betalife Advance">
@@ -1327,9 +1345,9 @@ img{display:block;max-width:100%;height:auto}
       </form>
       <div class="bo-step"><span class="bo-n">3</span><p class="bo-st">Bayar tunai bila barang sampai</p></div>
       <div class="bo-ring">
-        <div class="bo-r"><p class="bo-rk">Penghantaran</p><p class="bo-rv">PERCUMA</p></div>
-        <div class="bo-r"><p class="bo-rk">Cara bayaran</p><p class="bo-rv">COD, tunai</p></div>
-        <div class="bo-r"><p class="bo-rk">Kawasan</p><p class="bo-rv">Seluruh Singapura</p></div>
+        <div class="bo-r"><div class="bo-ik"><svg width="34" height="34" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></svg></div><p class="bo-rv">PERCUMA</p></div>
+        <div class="bo-r"><div class="bo-ik"><svg width="34" height="34" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></g></svg></div><p class="bo-rv">COD, tunai</p></div>
+        <div class="bo-r"><div class="bo-ik"><svg width="34" height="34" viewBox="0 0 24 24"><g fill="none" stroke="#c6f24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></svg></div><p class="bo-rv">Seluruh Singapura</p></div>
       </div>
       <p class="bo-sel">Maklumat tuan selamat dan hanya digunakan untuk penghantaran tempahan.</p>
     </div>

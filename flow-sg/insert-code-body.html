@@ -86,6 +86,7 @@
 /* ===== POPUP: (1) diam / nak keluar -> Dr. Mustaqim + WhatsApp, (2) nak keluar lagi -> kupon SGD 5 (sekali sahaja) ===== */
 (function(){
   var WA='6593417530', IDLE=(window.BTL_IDLE||35)*1000;
+  var P2_HIDUP=false; /* popup 2 (kupon SGD 5) dimatikan. Tukar ke true untuk hidupkan semula */
   var VID='https://s.ladicdn.com/64d0957e7550bc001218243b/whatsapp-video-2025-02-28-at-24556-pm-20250301033658-cgrfv.mp4';
   var POS='https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@382772dafa19d190989db851ca6d986a9900ac14/flow-sg/aset/vt-dr.webp';
   function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v);}catch(e){return null;}}
@@ -120,7 +121,7 @@
       '<a class="btlp-b btlp-wa" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Salam consultant, saya nak tanya tentang Betalife Advance (Singapura).')+'">Tanya consultant kami di WhatsApp</a>'+
       '<button class="btlp-b btlp-or" data-go>Teruskan tempah (bayar bila sampai)</button><button class="btlp-b btlp-l">Tutup</button>');
     w.querySelector('[data-go]').addEventListener('click',function(){keBorang(w);});return true;}
-  function p2(paksa){if(buka||ss('btl_p2')||!ss('btl_p1')||(!paksa&&diBorang()))return false;ss('btl_p2','1');
+  function p2(paksa){if(!P2_HIDUP||buka||ss('btl_p2')||!ss('btl_p1')||(!paksa&&diBorang()))return false;ss('btl_p2','1');
     var w=popup('<p class="btlp-t">Tunggu sekejap!</p><p class="btlp-h">Hadiah untuk tuan hari ini</p>'+
       '<div class="btlp-kup"><p class="btlp-kn">SGD 5</p><p class="btlp-ks">potongan untuk mana-mana pakej, tempahan hari ini sahaja</p></div>'+
       '<p class="btlp-p">Tekan butang di bawah. Potongan terus dikira dalam ringkasan pesanan.</p>'+
@@ -135,13 +136,13 @@
   window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500){p1();}ly=y;lt=t;},{passive:true});
   /* butang BACK (mobile & desktop): tunjuk popup dulu, back sekali lagi baru keluar */
   var jebak=false;
-  function pasang(){if(jebak||ss('btl_p2'))return;jebak=true;try{history.pushState({btl:1},'',location.href);}catch(e){}}
+  function pasang(){if(jebak||ss('btl_p2')||(!P2_HIDUP&&ss('btl_p1')))return;jebak=true;try{history.pushState({btl:1},'',location.href);}catch(e){}}
   ['click','touchend','keydown'].forEach(function(ev){window.addEventListener(ev,pasang,{passive:true});});
   window.addEventListener('popstate',function(){jebak=false;
     if(buka){tutup(cur);pasang();return;}
     var ok=!ss('btl_p1')?p1(true):p2(true);
     if(!ok){history.back();return;}
-    if(!ss('btl_p2'))pasang();});
+    if(!ss('btl_p2')&&P2_HIDUP)pasang();});
 })();
 </script>
 
@@ -174,5 +175,31 @@
     var id=cari(ev.target); if(!id)return;
     ev.preventDefault();ev.stopPropagation();main(id);
   },true);
+})();
+</script>
+
+<script>
+/* ===== BAR BAWAH (mobile): melekat di bawah skrin + seluruh petak (ikon & tulisan) boleh ditekan ===== */
+(function(){
+  var NAMA=['Utama','Pakar','Tempah','Ulasan','FAQ'];
+  function mula(){
+    var b=[].slice.call(document.querySelectorAll('.ladi-button .ladi-headline')).filter(function(h){return h.textContent.trim()==='FAQ';}).pop();
+    if(!b)return; var sec=b.closest('.ladi-section'); if(!sec||sec.dataset.btlbar)return; sec.dataset.btlbar=1;
+    var btn=NAMA.map(function(n){return [].slice.call(sec.querySelectorAll('.ladi-button .ladi-headline')).filter(function(h){return h.textContent.trim()===n;})[0];}).filter(Boolean).map(function(h){return h.closest('.ladi-element');});
+    function lekat(){
+      if(window.innerWidth<768){var h=sec.getBoundingClientRect().height;
+        sec.style.cssText+=';position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;z-index:2147482000!important;box-shadow:0 -6px 18px -8px rgba(0,0,0,.25)';
+        document.body.style.paddingBottom=h+'px';}
+    }
+    lekat();
+    sec.style.cursor='pointer';
+    sec.addEventListener('click',function(ev){
+      if(ev.target.closest('.ladi-button'))return;
+      var x=ev.clientX,best=null,jarak=1e9;
+      btn.forEach(function(e){var r=e.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-x);if(d<jarak){jarak=d;best=e;}});
+      if(best){var t=best.querySelector('.ladi-button')||best;t.click();}
+    });
+  }
+  mula(); window.addEventListener('load',mula); setTimeout(mula,1500);
 })();
 </script>
