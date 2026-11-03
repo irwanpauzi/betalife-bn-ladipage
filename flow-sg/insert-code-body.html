@@ -1,8 +1,8 @@
 <!-- Betalife Flow Singapore: thumbnail video tersuai. Tampal di Settings > Insert Code > Body. -->
 <script>
 (function(){
-  var B="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@79359e3549522a29147b724ba67c0d70bb7ffd01/flow-sg/aset/";
-  var M={"KWnQSJGOPsA":"vt-sg1","kSfx2Vr5lY0":"vt-sg2","zp37WRwfPgk":"vt-sg3","WyqZxP99Xlo":"vt-1","OOVw9COjktM":"vt-2","rARd1D7tXro":"vt-6","LvIb7BAi4Vc":"vt-roy","HiTHtCRgn3c":"vt-azlee"};
+  var B="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@382772dafa19d190989db851ca6d986a9900ac14/flow-sg/aset/";
+  var M={"KWnQSJGOPsA":"vt-sg1","kSfx2Vr5lY0":"vt-sg2","zp37WRwfPgk":"vt-sg3","eVyVKpzMtXk":"vt-7","OOVw9COjktM":"vt-2","rARd1D7tXro":"vt-6","LvIb7BAi4Vc":"vt-roy","HiTHtCRgn3c":"vt-azlee"};
   var css="", txt="", re=/#(VIDEO\d+) > \.ladi-video > \.ladi-video-background\{background-image: url\("https:\/\/img\.youtube\.com\/vi\/([\w-]{11})\//g, m;
   document.querySelectorAll('style').forEach(function(s){txt+=s.textContent;});
   while((m=re.exec(txt))){ if(M[m[2]]) css+="#"+m[1]+" > .ladi-video > .ladi-video-background{background-image:url('"+B+M[m[2]]+".webp')!important;background-size:cover!important;background-position:center!important}"; }
