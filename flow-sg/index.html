@@ -695,6 +695,30 @@ img{display:block;max-width:100%;height:auto}
 .bedah-s{margin:14px 0 0;padding:12px;border-radius:12px;background:#ffe14d;text-align:center;font:700 17px/1.4 'Quicksand',sans-serif;color:#10231a}
 @media (min-width:900px){.bedah{max-width:900px;margin-left:auto;margin-right:auto}.bedah-hero{max-width:420px;margin-left:auto;margin-right:auto}.bedah-grid{grid-template-columns:repeat(4,1fr)}.bd img{height:140px}}
 
+
+.borang{padding:40px 0;background:#f1faf0}
+.bo-kad{max-width:560px;margin:0 auto;padding:22px 16px;border-radius:24px;background:#ffffff;border-top:6px solid #1f9d46;box-shadow:0 18px 40px -24px rgba(11,58,36,.5)}
+.bo-step{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
+.bo-n{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#1f9d46;font:700 17px/1 'Quicksand',sans-serif;color:#ffffff}
+.bo-st{margin:0;font:700 19px/1.3 'Quicksand',sans-serif;color:#0b3a24}
+.bo-pk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bo-p{padding:8px 6px 10px;border-radius:14px;background:#f6faf3;border:2px solid #e3ece0;text-align:center}
+.bo-top{border-color:#f39200;background:#fffaf0}
+.bo-lbl{display:block;margin:0 0 4px;padding:3px 4px;border-radius:99px;background:#f39200;font:700 14px/1.1 'Quicksand',sans-serif;color:#ffffff}
+.bo-p img{width:100%;border-radius:10px}
+.bo-pn{margin:6px 0 0;font:700 16px/1.2 'Quicksand',sans-serif;color:#0b3a24}
+.bo-ph{margin:2px 0 0;font:700 19px/1.1 'Quicksand',sans-serif;color:#dc2626}
+.bo-pj{margin:4px 0 0;font:500 14px/1.25 'Quicksand',sans-serif;color:#3d5446}
+.bo-form{margin:0;padding:0}
+.bo-form label{display:block;margin:12px 0 6px;font:700 16px/1.3 'Quicksand',sans-serif;color:#10231a}
+.bo-form input,.bo-form select{display:block;width:100%;height:52px;box-sizing:border-box;padding:0 14px;border:1.5px solid #cfe3cf;border-radius:12px;background:#f9fcf8;font:500 17px/1.2 'Quicksand',sans-serif;color:#10231a}
+.bo-form button{display:block;width:100%;margin:18px 0 0;padding:17px 12px;border:0;border-radius:99px;background-color:#f39200;background-image:linear-gradient(180deg,#ffa82e,#e57f00);color:#ffffff;font:700 19px/1.2 'Quicksand',sans-serif;box-shadow:0 10px 22px -8px rgba(229,127,0,.7)}
+.bo-ring{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bo-r{padding:10px 6px;border-radius:12px;background:#0b3a24;text-align:center}
+.bo-rk{margin:0;font:500 14px/1.2 'Quicksand',sans-serif;color:#cfe5d6}
+.bo-rv{margin:4px 0 0;font:700 15px/1.2 'Quicksand',sans-serif;color:#c6f24e}
+.bo-sel{margin:14px 0 0;text-align:center;font:500 14px/1.4 'Quicksand',sans-serif;color:#557061}
+
 </style>
 </head>
 <body>
@@ -1213,9 +1237,36 @@ img{display:block;max-width:100%;height:auto}
 
 <section class="borang" id="borang">
   <div class="wrap">
-    <span class="tag tag-oren">Langkah terakhir</span>
-    <h2 class="h2">Borang tempahan</h2>
-    <p class="p">Isi maklumat di bawah. <b>Tuan bayar bila barang sampai.</b></p>
+    <div class="bo-kad">
+      <span class="tag tag-oren">Langkah terakhir</span>
+      <h2 class="h2">Lengkapkan butiran tempahan</h2>
+      <p class="p">Pilih pakej dan isi 4 maklumat ringkas. <b>Tuan bayar bila barang sampai.</b></p>
+      <div class="bo-step"><span class="bo-n">1</span><p class="bo-st">Pilih pakej</p></div>
+      <div class="bo-pk">
+        <div class="bo-p bo-top"><span class="bo-lbl">Paling ramai pilih</span><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2304e0a5950ea061db3e42c35409afcd83d02e03/flow-sg/aset/pakej-3.webp" width="900" height="541" alt="3 botol Betalife Advance"><p class="bo-pn">3 Botol</p><p class="bo-ph">SGD 139</p><p class="bo-pj">Jimat SGD 188 + jaminan refund</p></div>
+        <div class="bo-p"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2304e0a5950ea061db3e42c35409afcd83d02e03/flow-sg/aset/pakej-2.webp" width="900" height="541" alt="2 botol Betalife Advance"><p class="bo-pn">2 Botol</p><p class="bo-ph">SGD 119</p><p class="bo-pj">Jimat SGD 99</p></div>
+        <div class="bo-p"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@2304e0a5950ea061db3e42c35409afcd83d02e03/flow-sg/aset/pakej-1.webp" width="900" height="541" alt="1 botol Betalife Advance"><p class="bo-pn">1 Botol</p><p class="bo-ph">SGD 69</p><p class="bo-pj">Jimat SGD 40</p></div>
+      </div>
+      <div class="bo-step"><span class="bo-n">2</span><p class="bo-st">Pilih pakej &amp; isi maklumat</p></div>
+      <form class="bo-form">
+        <label for="f-nama">Nama penuh *</label>
+        <input id="f-nama" name="name" type="text" placeholder="Contoh: Ahmad bin Ali" required>
+        <label for="f-tel">No. telefon / WhatsApp *</label>
+        <input id="f-tel" name="phone" type="tel" placeholder="Contoh: 8123 4567" required>
+        <label for="f-alamat">Alamat penuh di Singapura *</label>
+        <input id="f-alamat" name="address" type="text" placeholder="Blok, jalan, no. unit" required>
+        <label for="f-pos">Poskod *</label>
+        <input id="f-pos" name="zipcode" type="text" placeholder="6 digit, contoh: 520123" required>
+        <button type="submit">Tempah Sekarang (Bayar Bila Sampai)</button>
+      </form>
+      <div class="bo-step"><span class="bo-n">3</span><p class="bo-st">Bayar tunai bila barang sampai</p></div>
+      <div class="bo-ring">
+        <div class="bo-r"><p class="bo-rk">Penghantaran</p><p class="bo-rv">PERCUMA</p></div>
+        <div class="bo-r"><p class="bo-rk">Cara bayaran</p><p class="bo-rv">COD, tunai</p></div>
+        <div class="bo-r"><p class="bo-rk">Kawasan</p><p class="bo-rv">Seluruh Singapura</p></div>
+      </div>
+      <p class="bo-sel">Maklumat tuan selamat dan hanya digunakan untuk penghantaran tempahan.</p>
+    </div>
   </div>
 </section>
 
