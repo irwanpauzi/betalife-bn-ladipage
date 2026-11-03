@@ -719,6 +719,22 @@ img{display:block;max-width:100%;height:auto}
 .bo-rv{margin:4px 0 0;font:700 15px/1.2 'Quicksand',sans-serif;color:#c6f24e}
 .bo-sel{margin:14px 0 0;text-align:center;font:500 14px/1.4 'Quicksand',sans-serif;color:#557061}
 
+
+.bo-hint{margin:10px 0 0;text-align:center;font:600 15px/1.3 'Quicksand',sans-serif;color:#1f9d46}
+.bo-p{cursor:pointer;transition:.2s}
+.bo-sum{margin:16px 0 0;padding:16px 16px 14px;border-radius:18px;background-color:#f7f5fd;background-image:linear-gradient(120deg,#fff8f0,#f3f1fc);border:1px solid #e7e2f2}
+.bo-sum-h{margin:0 0 8px;text-align:center;font:700 21px/1.3 'Quicksand',sans-serif;color:#10231a}
+.bo-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:9px 0 0}
+.bo-k{margin:0;font:500 17px/1.3 'Quicksand',sans-serif;color:#2c4235}
+.bo-v{margin:0;text-align:right;font:700 17px/1.3 'Quicksand',sans-serif;color:#10231a}
+.bo-coret{color:#8a9a90;text-decoration:line-through}
+.bo-merah{color:#dc2626}
+.bo-hijau{color:#059669}
+.bo-tot{margin-top:14px;padding-top:12px;border-top:1.5px dashed #d8d2e6}
+.bo-tk{font:700 21px/1.2 'Quicksand',sans-serif;color:#10231a}
+.bo-tv{font:700 24px/1.2 'Quicksand',sans-serif;color:#dc2626}
+.bo-inc{margin:10px 0 0;font:500 15px/1.4 'Quicksand',sans-serif;color:#3d5446}
+
 </style>
 </head>
 <body>
@@ -1247,8 +1263,21 @@ img{display:block;max-width:100%;height:auto}
         <div class="bo-p"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@1d6b218008c85f903ca6b5680d7a042eb1540406/flow-sg/aset/pakej-2.webp" width="900" height="541" alt="2 botol Betalife Advance"><p class="bo-pn">2 Botol</p><p class="bo-ph">SGD 119</p><p class="bo-pj">Jimat SGD 99</p></div>
         <div class="bo-p"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@1d6b218008c85f903ca6b5680d7a042eb1540406/flow-sg/aset/pakej-1.webp" width="900" height="541" alt="1 botol Betalife Advance"><p class="bo-pn">1 Botol</p><p class="bo-ph">SGD 69</p><p class="bo-pj">Jimat SGD 40</p></div>
       </div>
+      <p class="bo-hint">Tekan kad untuk tukar pakej</p>
+      <div class="bo-sum">
+        <p class="bo-sum-h">Ringkasan pesanan</p>
+        <div class="bo-row"><p class="bo-k">Pakej</p><p class="bo-v">3 Botol (Rawatan Penuh)</p></div>
+        <div class="bo-row"><p class="bo-k">Harga asal</p><p class="bo-v bo-coret">SGD 327.00</p></div>
+        <div class="bo-row"><p class="bo-k">Diskaun</p><p class="bo-v bo-merah">- SGD 188.00</p></div>
+        <div class="bo-row"><p class="bo-k">Penghantaran</p><p class="bo-v bo-hijau">PERCUMA</p></div>
+        <div class="bo-row"><p class="bo-k">Bayaran</p><p class="bo-v">COD, bayar bila sampai</p></div>
+        <div class="bo-row bo-tot"><p class="bo-k bo-tk">TOTAL</p><p class="bo-v bo-tv">SGD 139.00</p></div>
+        <p class="bo-inc">Termasuk: 3 botol (45 hari) + jaminan 100% refund</p>
+      </div>
       <div class="bo-step"><span class="bo-n">2</span><p class="bo-st">Isi maklumat penghantaran</p></div>
       <form class="bo-form">
+        <label for="f-pakej">Pakej pilihan *</label>
+        <input id="f-pakej" name="pakej" type="text" value="3 Botol - SGD 139" placeholder="Tekan kad pakej di atas" required>
         <label for="f-nama">Nama penuh *</label>
         <input id="f-nama" name="name" type="text" placeholder="Contoh: Ahmad bin Ali" required>
         <label for="f-tel">No. telefon / WhatsApp *</label>

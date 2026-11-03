@@ -22,3 +22,43 @@
   jari(); window.addEventListener('load',jari); setTimeout(jari,1500);
 })();
 </script>
+
+<script>
+/* ===== BORANG SINGAPURA: pilih pakej (kad) + ringkasan pesanan + format telefon/poskod ===== */
+(function(){
+  var PK={
+    "3":{nama:"3 Botol (Rawatan Penuh)",asal:327,diskaun:188,inc:"3 botol (45 hari) + jaminan 100% refund",nilai:"3 Botol - SGD 139"},
+    "2":{nama:"2 Botol (Melegakan)",asal:218,diskaun:99,inc:"2 botol (30 hari)",nilai:"2 Botol - SGD 119"},
+    "1":{nama:"1 Botol (Percubaan)",asal:109,diskaun:40,inc:"1 botol (15 hari)",nilai:"1 Botol - SGD 69"}
+  };
+  function f(n){return "SGD "+n.toFixed(2);}
+  function el(sec,txt){var a=sec.querySelectorAll('.ladi-paragraph,.ladi-headline');for(var i=0;i<a.length;i++){if(a[i].textContent.trim()===txt)return a[i];}return null;}
+  function mula(){
+    var tajuk=[].slice.call(document.querySelectorAll('.ladi-paragraph,.ladi-headline')).filter(function(e){return e.textContent.trim()==='Ringkasan pesanan';})[0];
+    if(!tajuk) return;
+    var sec=tajuk.closest('.ladi-section'); if(!sec||sec.dataset.btl) return; sec.dataset.btl=1;
+    var R={pakej:el(sec,'3 Botol (Rawatan Penuh)'),asal:el(sec,'SGD 327.00'),disk:el(sec,'- SGD 188.00'),tot:el(sec,'SGD 139.00'),inc:el(sec,'Termasuk: 3 botol (45 hari) + jaminan 100% refund')};
+    var inp=sec.querySelector('input[name="pakej"]');
+    if(inp){var it=inp.closest('.ladi-element');if(it){it.style.display='none';var lb=it.previousElementSibling;}
+      [].slice.call(sec.querySelectorAll('.ladi-paragraph,.ladi-headline')).forEach(function(e){if(e.textContent.trim()==='Pakej pilihan *'){var x=e.closest('.ladi-element');if(x)x.style.display='none';}});}
+    var kad={};
+    ['3','2','1'].forEach(function(n){var t=el(sec,n+' Botol');if(!t)return;var k=t.closest('.ladi-element').parentElement.closest('.ladi-element');if(k)kad[n]=k;});
+    var gaya=document.createElement('style');gaya.textContent='.btl-kad{cursor:pointer;transition:transform .2s}.btl-kad.btl-on{transform:scale(1.04)}.btl-kad.btl-on>.ladi-group>.ladi-element:first-child .ladi-box,.btl-kad.btl-on .ladi-box{box-shadow:0 0 0 3px #1f9d46!important}.btl-tick{position:absolute;top:-8px;left:-8px;width:26px;height:26px;border-radius:50%;background:#1f9d46;color:#fff;font:700 16px/26px Quicksand,sans-serif;text-align:center;z-index:9;display:none}.btl-on .btl-tick{display:block}';document.head.appendChild(gaya);
+    function pilih(n){
+      var p=PK[n]; if(!p) return;
+      for(var k in kad){kad[k].classList.toggle('btl-on',k===n);}
+      if(R.pakej)R.pakej.textContent=p.nama; if(R.asal)R.asal.textContent=f(p.asal);
+      if(R.disk)R.disk.textContent='- '+f(p.diskaun); if(R.tot)R.tot.textContent=f(p.asal-p.diskaun);
+      if(R.inc)R.inc.textContent='Termasuk: '+p.inc;
+      if(inp){inp.value=p.nilai;inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));}
+    }
+    for(var n in kad){(function(n){var k=kad[n];k.classList.add('btl-kad');k.style.overflow='visible';var t=document.createElement('span');t.className='btl-tick';t.textContent='✓';k.appendChild(t);k.addEventListener('click',function(){pilih(n);});})(n);}
+    pilih('3');
+    var tel=sec.querySelector('input[name="phone"]');
+    if(tel){tel.addEventListener('blur',function(){var d=tel.value.replace(/\D/g,'');if(d.indexOf('65')===0&&d.length===10)d=d.slice(2);if(d.length===8)tel.value='+65 '+d.slice(0,4)+' '+d.slice(4);});}
+    var pos=sec.querySelector('input[name="zipcode"]');
+    if(pos){pos.setAttribute('inputmode','numeric');pos.addEventListener('input',function(){pos.value=pos.value.replace(/\D/g,'').slice(0,6);});}
+  }
+  mula(); window.addEventListener('load',mula); setTimeout(mula,1500); setTimeout(mula,3500);
+})();
+</script>
