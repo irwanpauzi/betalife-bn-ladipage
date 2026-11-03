@@ -106,26 +106,26 @@
   '.btlp-kn{margin:0;font:700 44px/1 Quicksand,sans-serif;color:#dc2626}'+
   '.btlp-ks{margin:6px 0 0;font:600 16px/1.3 Quicksand,sans-serif;color:#7f1d1d}';
   var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
-  var buka=false;
-  function tutup(w){if(w&&w.parentNode)w.parentNode.removeChild(w);buka=false;var v=w&&w.querySelector('video');if(v)v.pause();}
+  var buka=false,cur=null;
+  function tutup(w){cur=null;if(w&&w.parentNode)w.parentNode.removeChild(w);buka=false;var v=w&&w.querySelector('video');if(v)v.pause();}
   function popup(html){buka=true;var w=document.createElement('div');w.className='btlp';w.innerHTML='<div class="btlp-k"><button class="btlp-x" aria-label="Tutup">×</button>'+html+'</div>';
-    w.addEventListener('click',function(e){if(e.target===w||e.target.classList.contains('btlp-x')||e.target.classList.contains('btlp-l'))tutup(w);});document.body.appendChild(w);return w;}
+    w.addEventListener('click',function(e){if(e.target===w||e.target.classList.contains('btlp-x')||e.target.classList.contains('btlp-l'))tutup(w);});document.body.appendChild(w);cur=w;return w;}
   function keBorang(w){tutup(w);var t=[].slice.call(document.querySelectorAll('.ladi-paragraph,.ladi-headline')).filter(function(e){return e.textContent.trim()==='Lengkapkan butiran tempahan';})[0];
     if(t){var s=t.closest('.ladi-section');window.scrollTo({top:s.getBoundingClientRect().top+window.pageYOffset-10,behavior:'smooth'});}}
   function diBorang(){var i=document.querySelector('input[name="name"]');if(!i)return false;if(i.value||document.activeElement&&document.activeElement.closest&&document.activeElement.closest('form'))return true;
     var r=i.getBoundingClientRect();return r.top<window.innerHeight&&r.bottom>0;}
-  function p1(){if(buka||ss('btl_p1')||diBorang())return;ss('btl_p1','1');
+  function p1(paksa){if(buka||ss('btl_p1')||(!paksa&&diBorang()))return false;ss('btl_p1','1');
     var w=popup('<p class="btlp-t">Masih ragu-ragu?</p><p class="btlp-h">Dengar Dr. Mustaqim 1 minit</p><p class="btlp-p">Tanda awal bengkak prostat yang ramai lelaki abaikan. Ada soalan? Consultant kami sedia bantu.</p>'+
       '<video src="'+VID+'" poster="'+POS+'" controls playsinline preload="none"></video>'+
       '<a class="btlp-b btlp-wa" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Salam consultant, saya nak tanya tentang Betalife Advance (Singapura).')+'">Tanya consultant kami di WhatsApp</a>'+
       '<button class="btlp-b btlp-or" data-go>Teruskan tempah (bayar bila sampai)</button><button class="btlp-b btlp-l">Tutup</button>');
-    w.querySelector('[data-go]').addEventListener('click',function(){keBorang(w);});}
-  function p2(){if(buka||ss('btl_p2')||!ss('btl_p1')||diBorang())return;ss('btl_p2','1');
+    w.querySelector('[data-go]').addEventListener('click',function(){keBorang(w);});return true;}
+  function p2(paksa){if(buka||ss('btl_p2')||!ss('btl_p1')||(!paksa&&diBorang()))return false;ss('btl_p2','1');
     var w=popup('<p class="btlp-t">Tunggu sekejap!</p><p class="btlp-h">Hadiah untuk tuan hari ini</p>'+
       '<div class="btlp-kup"><p class="btlp-kn">SGD 5</p><p class="btlp-ks">potongan untuk mana-mana pakej, tempahan hari ini sahaja</p></div>'+
       '<p class="btlp-p">Tekan butang di bawah. Potongan terus dikira dalam ringkasan pesanan.</p>'+
       '<button class="btlp-b btlp-or" data-kup>Tuntut SGD 5 &amp; tempah</button><button class="btlp-b btlp-l">Tak apa, terima kasih</button>');
-    w.querySelector('[data-kup]').addEventListener('click',function(){window.BTL_KUPON=1;if(window.BTL_PILIH)window.BTL_PILIH(window.BTL_PAKEJ||'3');keBorang(w);});}
+    w.querySelector('[data-kup]').addEventListener('click',function(){window.BTL_KUPON=1;if(window.BTL_PILIH)window.BTL_PILIH(window.BTL_PAKEJ||'3');keBorang(w);});return true;}
   /* diam */
   var tm; function reset(){clearTimeout(tm);tm=setTimeout(function(){ss('btl_p1')?p2():p1();},IDLE);}
   ['scroll','touchstart','mousemove','keydown','click'].forEach(function(ev){window.addEventListener(ev,reset,{passive:true});});reset();
@@ -133,5 +133,14 @@
   document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<10){ss('btl_p1')?p2():p1();}});
   var ly=window.pageYOffset,lt=Date.now();
   window.addEventListener('scroll',function(){var y=window.pageYOffset,t=Date.now(),v=(ly-y)/Math.max(1,t-lt);if(v>2.5&&y>1500){ss('btl_p1')?p2():p1();}ly=y;lt=t;},{passive:true});
+  /* butang BACK (mobile & desktop): tunjuk popup dulu, back sekali lagi baru keluar */
+  var jebak=false;
+  function pasang(){if(jebak||ss('btl_p2'))return;jebak=true;try{history.pushState({btl:1},'',location.href);}catch(e){}}
+  ['click','touchend','keydown'].forEach(function(ev){window.addEventListener(ev,pasang,{passive:true});});
+  window.addEventListener('popstate',function(){jebak=false;
+    if(buka){tutup(cur);pasang();return;}
+    var ok=!ss('btl_p1')?p1(true):p2(true);
+    if(!ok){history.back();return;}
+    if(!ss('btl_p2'))pasang();});
 })();
 </script>
