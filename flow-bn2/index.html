@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ladipage-rules" content="v2">
+<title>Betalife Advance Brunei</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<!--
+  BETALIFE FLOW BRUNEI 2: tema baru "Pukul 3 Pagi" (berbeza sepenuhnya daripada Flow Brunei lama).
+  Kajian: reports/Flow UI UX kesihatan Brunei.md. Sasaran lelaki & wanita 30+, hardcore, COD penuh oleh team Brunei.
+  Palet: malam #0E1B3D / #070F24, emas #F2C21B, sorot #FFE45C, CTA #E63A1E, krim #FFF8E7, dakwat #141414, teal wanita #0F7C7A.
+  Font: Anton (H1 sahaja), Quicksand 500/600 (semua teks lain). Minimum 15px.
+  Peraturan penukar: tiada letter-spacing, tiada :before/:after, tiada sticky, tiada animasi masuk dalam hero.
+-->
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Quicksand',sans-serif;background:#070F24;color:#141414}
+img{display:block;max-width:100%;height:auto}
+#b2{max-width:480px;margin:0 auto;background:#FFF8E7}
+#b2 section{position:relative}
+
+/* butang CTA */
+.cta{display:block;margin:22px auto 0;width:100%;padding:19px 14px;border-radius:16px;background-color:#E63A1E;background-image:linear-gradient(180deg,#FF5A33,#D9300F);color:#fff;text-align:center;text-decoration:none;font:700 21px/1.25 'Quicksand',sans-serif;box-shadow:0 6px 0 #8F1D06,0 14px 28px rgba(230,58,30,.35);transition:.2s}
+.cta:hover{filter:brightness(1.07)}
+.cta:active{transform:translateY(4px);box-shadow:0 2px 0 #8F1D06}
+.nafas{animation:breathe 2.6s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+/* 01 jalur amanah atas */
+.jalur{padding:12px 14px;background:#F2C21B;text-align:center}
+.jalur p{margin:0;font:700 16px/1.35 'Quicksand',sans-serif;color:#141414}
+
+/* 02 hero */
+.hero{padding:22px 16px 30px;background-color:#0E1B3D;background-image:radial-gradient(70% 40% at 80% 6%,rgba(242,194,27,.22) 0,rgba(242,194,27,0) 70%),linear-gradient(180deg,#14254F 0,#0E1B3D 45%,#070F24 100%);text-align:center}
+.logo{width:150px;margin:0 auto}
+.pil{display:block;width:fit-content;max-width:100%;margin:16px auto 0;padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.1);border:1.5px solid rgba(242,194,27,.7);color:#FFE45C;font:700 16px/1.3 'Quicksand',sans-serif}
+.jam{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin:18px 0 0}
+.jam-no{margin:0;display:inline-block;font:400 92px/0.9 Anton,Impact,sans-serif;color:#F2C21B;text-shadow:0 0 30px rgba(242,194,27,.45)}
+.jam-pg{margin:0 0 8px;display:inline-block;font:400 30px/1 Anton,Impact,sans-serif;color:#fff}
+.h1{margin:14px 0 0;font:400 40px/1.08 Anton,Impact,sans-serif;color:#fff;text-transform:uppercase}
+.h1-sorot{display:block;width:fit-content;margin:10px auto 0;padding:4px 14px 6px;border-radius:10px;background:#E63A1E;font:400 40px/1.08 Anton,Impact,sans-serif;color:#fff;text-transform:uppercase;box-shadow:0 5px 0 #8F1D06}
+.sub{margin:18px 0 0;font:500 19px/1.55 'Quicksand',sans-serif;color:#E8EDF8}
+.sub u{text-decoration-color:#F2C21B;text-decoration-thickness:3px;text-underline-offset:4px;color:#fff}
+.babak{margin:22px 0 0;border-radius:18px;border:3px solid #F2C21B;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.amanah{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:16px 0 0}
+.amanah div{padding:12px 6px;border-radius:12px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18)}
+.amanah svg{display:block;margin:0 auto}
+.amanah p{margin:6px 0 0;font:600 15px/1.3 'Quicksand',sans-serif;color:#fff}
+.logo-sijil{display:flex;justify-content:center;align-items:center;gap:14px;margin:18px 0 0;padding:12px 10px;border-radius:14px;background:#fff}
+.logo-sijil img{width:62px;height:62px}
+</style>
+</head>
+<body>
+<div id="b2">
+
+<!-- 01. JALUR AMANAH (bukan melekat) -->
+<section class="jalur">
+  <p>Bayar Bila Barang Sampai &bull; Runner Team Brunei &bull; Percuma 4 Daerah</p>
+</section>
+
+<!-- 02. HERO "PUKUL 3 PAGI" -->
+<section class="hero">
+  <img class="logo" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/logo-betalife-cerah.webp" width="420" height="225" alt="Betalife Advance">
+  <p class="pil">Untuk lelaki &amp; wanita 30 tahun ke atas</p>
+  <div class="jam"><p class="jam-no">3:07</p><p class="jam-pg">PAGI</p></div>
+  <h1 class="h1">Terjaga Lagi Sebab<br>Nak Kencing?</h1>
+  <p class="h1-sorot">Jangan Tunggu<br>Sampai Teruk!</p>
+  <p class="sub">Kencing malam, <u>menitis</u> dan <u>tak lawas</u> bukan sekadar "faktor usia". Ia tanda saluran kencing anda sedang terganggu. Bagi lelaki, puncanya selalunya <u>prostat yang membengkak</u>.</p>
+  <img class="babak" src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/hero-3pagi.webp" width="840" height="1043" alt="Suami terjaga pukul 3 pagi nak ke tandas, isteri turut terjaga">
+  <a class="cta nafas" href="#tempah" role="button">TEMPAH SEKARANG, BAYAR BILA SAMPAI</a>
+  <div class="amanah">
+    <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F2C21B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><p>Runner team Brunei</p></div>
+    <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F2C21B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg><p>Bayar tunai di pintu</p></div>
+    <div><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F2C21B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><p>Percuma 4 daerah</p></div>
+  </div>
+  <div class="logo-sijil">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/sijil-kkm.png" width="200" height="200" alt="Logo KKM">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/sijil-halal.png" width="200" height="200" alt="Logo Halal">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/sijil-gmp.png" width="200" height="200" alt="Logo GMP">
+    <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/betalife-bn-ladipage@317ac28fbe147b8ec782f559ac3d7b9fb8324f79/flow-bn2/aset/sijil-haccp.png" width="200" height="200" alt="Logo HACCP">
+  </div>
+</section>
+
+</div>
+</body>
+</html>
